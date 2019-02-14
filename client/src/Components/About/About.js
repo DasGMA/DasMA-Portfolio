@@ -1,10 +1,11 @@
 import React from 'react';
+import { Container } from 'react-materialize';
 
 function About() {
     return (
-        <div>
+        <Container>
             About
-        </div>
+        </Container>
     )
 }
 

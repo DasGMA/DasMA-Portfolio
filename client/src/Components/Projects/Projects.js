@@ -1,10 +1,11 @@
 import React from 'react';
+import { Container } from 'react-materialize';
 
 function Projects() {
     return (
-        <div>
+        <Container>
             Projects
-        </div>
+        </Container>
     )
 }
 
