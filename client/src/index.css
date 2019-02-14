@@ -50,7 +50,7 @@ a.navi {
 
 a.navi:hover {
   background: #383838;
-  transition: 0.s ease-out;
+  transition: 0.2s ease-out;
   color: #fff;
 }
 
@@ -65,6 +65,163 @@ li a.navi.active {
   flex-direction: column;
 }
 
-.home-page {
 
+
+.social-icons{
+  cursor: pointer;
+  color: grey;
+  padding: 0 1.2rem;
+}
+
+.social-icons:last-child {
+  padding-right: 0;
+}
+
+.social-icons:hover {
+  color: #eceff1;
+  transition: 0.2s ease-out;
+}
+
+.icons {
+  text-align: right;
+}
+
+.meetme-icon{
+  -webkit-animation-name: blinkingIcon;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-name: blinkingIcon;
+  -moz-animation-duration: 3s;
+  -moz-animation-timing-function: linear;
+  -moz-animation-iteration-count: infinite;
+  animation-name: blinkingIcon;
+  animation-duration: 3s;
+  animation-timing-function: linear; 
+  animation-iteration-count: infinite;
+  color: blue;
+}
+
+@-moz-keyframes blinkingIcon {
+  0% { opacity: 1.0; }
+  25% {opacity: 0.5; }
+  50% { opacity: 0.3; }
+  100% { opacity: 1.0; } 
+}
+
+@-webkit-keyframes blinkingIcon { 
+  0% { opacity: 1.0; }
+  25% {opacity: 0.5; }
+  50% { opacity: 0.3; }
+  100% { opacity: 1.0; } 
+} 
+
+@keyframes blinkingIcon { 
+  0% { opacity: 1.0; } 
+  25% {opacity: 0.5; }
+  50% { opacity: 0.3; } 
+  100% { opacity: 1.0; } 
+}
+
+.meetme-icon:hover {
+  cursor: pointer;
+}
+
+.home-page{
+  padding-top: 7rem;
+}
+
+.home-page .column {
+  text-align: center;
+  margin-top: 3rem;
+}
+.home-page h1{
+  font-size: 7vw;
+}
+.home-page h2{
+  font-size: 3vw;
+}
+
+@media (min-width: 992px) {
+  .home-page{
+    padding-top: 15rem;
+  }
+  .home-page h1{
+    font-size: 7vw;
+  }
+  .home-page h2{
+    font-size: 3vw;
+  }
+}
+
+@media (min-width: 600px) {
+  .home-page{
+    padding-top: 15rem;
+  }
+  .home-page h1{
+    font-size: 9vw;
+  }
+  .home-page h2{
+    font-size: 4vw;
+  }
+}
+
+@media (min-width: 993px) {
+  .home-page{
+    padding-top: 15rem;
+  }
+  .home-page h1{
+    font-size: 7vw;
+  }
+  .home-page h2{
+    font-size: 3vw;
+  }
+}
+
+@media (min-width: 320px) {
+  .home-page{
+    padding-top: 7rem;
+  }
+  .home-page h1{
+    font-size: 16vw;
+  }
+  .home-page h2{
+    font-size: 5vw;
+  }
+}
+
+@media (min-width: 375px) {
+  .home-page{
+    padding-top: 7rem;
+  }
+  .home-page h1{
+    font-size: 16vw;
+  }
+  .home-page h2{
+    font-size: 5vw;
+  }
+}
+
+@media (min-width: 1200px) {
+  .home-page{
+    padding-top: 7rem;
+  }
+  .home-page h1{
+    font-size: 7vw;
+  }
+  .home-page h2{
+    font-size: 5vw;
+  }
+}
+
+@media (min-width: 1024px) {
+  .home-page{
+    padding-top: 7rem;
+  }
+  .home-page h1{
+    font-size: 7vw;
+  }
+  .home-page h2{
+    font-size: 3vw;
+  }
 }
