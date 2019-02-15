@@ -16,6 +16,9 @@ main {
   flex: 1 0 auto;
 }
 
+/* Blurry image */
+
+
 img.bg {
   background: no-repeat center center fixed; 
   background-size: cover;
@@ -44,7 +47,17 @@ img.bg {
   }
 }
 
-a.navi {
+.app {
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+
+/* Navigation */
+
+a.navi{
   border-bottom: none;
 }
 
@@ -58,14 +71,8 @@ li a.navi.active {
   background: #383838;
 }
 
-.app {
-  background: rgba(255, 255, 255, 0.1);
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-}
 
-
+/* Footer social icons */
 
 .social-icons{
   cursor: pointer;
@@ -86,6 +93,8 @@ li a.navi.active {
   text-align: right;
 }
 
+/* Home Page blinking icon*/
+
 .meetme-icon{
   -webkit-animation-name: blinkingIcon;
   -webkit-animation-duration: 3s;
@@ -99,7 +108,7 @@ li a.navi.active {
   animation-duration: 3s;
   animation-timing-function: linear; 
   animation-iteration-count: infinite;
-  color: blue;
+  color: #00e2e2;
 }
 
 @-moz-keyframes blinkingIcon {
@@ -127,13 +136,15 @@ li a.navi.active {
   cursor: pointer;
 }
 
+
+/* Home page media queries */
+
 .home-page{
   padding-top: 7rem;
 }
 
 .home-page .column {
-  text-align: center;
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 .home-page h1{
   font-size: 7vw;
@@ -195,10 +206,10 @@ li a.navi.active {
     padding-top: 7rem;
   }
   .home-page h1{
-    font-size: 16vw;
+    font-size: 13vw;
   }
   .home-page h2{
-    font-size: 5vw;
+    font-size: 4vw;
   }
 }
 
@@ -219,9 +230,99 @@ li a.navi.active {
     padding-top: 7rem;
   }
   .home-page h1{
-    font-size: 7vw;
+    font-size: 13vw;
   }
   .home-page h2{
-    font-size: 3vw;
+    font-size: 4vw;
   }
+}
+
+
+/* Resume page styling */
+
+input[type="radio"] { display: none; }
+
+input[type="radio"]:checked + .resume-row { display: block; }
+
+.resume{
+  position: absolute;
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto;
+}
+
+.resume h4{
+  padding: 0;
+  margin: 0;
+}
+
+.resume .resume-row{
+  height: 100%;
+  display: none;
+}
+
+.resume .resume-row label {
+  position: absolute;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 1.5rem;
+  bottom: calc(50% - 4rem);
+}
+
+.resume .resume-row label:nth-child(even) { right: 30px; }
+
+.resume .resume-row label:nth-child(odd) { left: 30px; }
+
+.resume .column-bright{
+  background: white;
+  height: 100%;
+  height: 665px;
+  padding: 3rem;
+}
+
+.resume .column-dark{
+  background: #141414;
+  height: 100%;
+  min-height: 665px;
+  padding: 3rem;
+}
+
+.centered{
+  justify-content: center;
+}
+
+.date{
+  color: #008080;
+  font-weight: 900;
+  font-size: 1.4rem;
+  letter-spacing: 0.2rem;
+  
+}
+
+.position{
+  color: #c3b323;
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 0.2rem;
+}
+
+.company{
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 900;
+  letter-spacing: 0.2rem;
+  margin-top: 1rem;
+}
+
+.responsibility{
+  color: grey;
+}
+
+.jobs {
+  padding-bottom: 2rem;
+}
+
+.jobs:last-child{
+  padding-bottom:0;
 }
