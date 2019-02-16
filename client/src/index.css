@@ -37,7 +37,7 @@ img.bg {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  margin:-5px;
+  margin: -10px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -240,16 +240,26 @@ li a.navi.active {
 
 /* Resume page styling */
 
-input[type="radio"] { display: none; }
+.container .row{
+  margin-left: 0;
+  margin-right: 0;
+}
 
-input[type="radio"]:checked + .resume-row { display: block; }
+.carousel{ 
+  min-height: 700px;
+  }
+
+.carousel .indicators .indicator-item.active {
+    background-color: red;
+  }
+
+.carousel .indicators .indicator-item {
+    background-color: #00e2e2;
+  }
 
 .resume{
-  position: absolute;
-  left: 0; 
-  right: 0; 
-  margin-left: auto; 
-  margin-right: auto;
+  padding-top: 2rem;
+  height: calc(100vh - 128px);
 }
 
 .resume h4{
@@ -257,35 +267,26 @@ input[type="radio"]:checked + .resume-row { display: block; }
   margin: 0;
 }
 
-.resume .resume-row{
-  height: 100%;
-  display: none;
+.carousel.carousel-slider {
+  min-height: calc(100vh - 128px - 2rem);
 }
-
-.resume .resume-row label {
-  position: absolute;
-  display: inline-block;
-  cursor: pointer;
-  font-size: 1.5rem;
-  bottom: calc(50% - 4rem);
-}
-
-.resume .resume-row label:nth-child(even) { right: 30px; }
-
-.resume .resume-row label:nth-child(odd) { left: 30px; }
 
 .resume .column-bright{
   background: white;
-  height: 100%;
-  height: 665px;
-  padding: 3rem;
+  height: calc(100vh - 128px);
+  padding: 0 3rem;
 }
 
 .resume .column-dark{
   background: #141414;
-  height: 100%;
-  min-height: 665px;
-  padding: 3rem;
+  height: calc(100vh - 128px);
+  padding: 0 3rem;
+}
+
+.aligned{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .centered{
@@ -303,7 +304,7 @@ input[type="radio"]:checked + .resume-row { display: block; }
 .position{
   color: #c3b323;
   font-size: 1rem;
-  font-weight: 300;
+  font-weight: 500;
   letter-spacing: 0.2rem;
 }
 
@@ -312,7 +313,7 @@ input[type="radio"]:checked + .resume-row { display: block; }
   font-size: 1.4rem;
   font-weight: 900;
   letter-spacing: 0.2rem;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 .responsibility{
@@ -320,9 +321,30 @@ input[type="radio"]:checked + .resume-row { display: block; }
 }
 
 .jobs {
-  padding-bottom: 2rem;
+  padding-bottom: 1.5rem;
 }
 
 .jobs:last-child{
   padding-bottom:0;
+}
+
+.techTools{
+  color: #c3b323;
+  font-size: 1.4rem;
+  font-weight: 900;
+  letter-spacing: 0.2rem;
+}
+
+.techToolsList{
+  padding-top: 0.5rem;
+  color: #fff;
+  letter-spacing: 0.1rem;
+}
+
+.school{
+  color: #000;
+  font-size: 1.4rem;
+  font-weight: 900;
+  letter-spacing: 0.2rem;
+  margin-top: 0.5rem;
 }
