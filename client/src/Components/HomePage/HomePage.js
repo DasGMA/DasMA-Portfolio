@@ -4,13 +4,12 @@ import { Link } from 'react-router-dom';
 
 function HomePage() {
     return (
-        <Container className = 'home-page'>
+        <Container className = 'home-page center-align'>
         <img src={require ('../../Media/Dell.png')} className = 'bg' alt = 'Home page' />
-            <Row className = 'blue-grey-text text-lighten-5'>
+            <Row className = 'blue-grey-text text-lighten-5 valign-wrapper'>
                 <Col s={12}>
                     <h1>Hi. I'm Das.</h1>
-                    <h2>A software developer from California.</h2>
-                    <h2>Welcome to my domain.</h2>
+                    <h2>Software developer from California.</h2>
                 </Col>
             </Row>
             <Row className = 'blue-grey-text text-lighten-5'>
