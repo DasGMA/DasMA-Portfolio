@@ -245,10 +245,6 @@ li a.navi.active {
   margin-right: 0;
 }
 
-.carousel{ 
-  min-height: 700px;
-  }
-
 .carousel .indicators .indicator-item.active {
     background-color: red;
   }
@@ -258,8 +254,8 @@ li a.navi.active {
   }
 
 .resume{
-  padding-top: 2rem;
-  height: calc(100vh - 128px);
+  padding-top: 1rem;
+  min-height: calc(100vh - 128px - 1.5rem);
 }
 
 .resume h4{
@@ -267,20 +263,50 @@ li a.navi.active {
   margin: 0;
 }
 
+.resume h1{
+  font-weight: bold;
+}
+
 .carousel.carousel-slider {
-  min-height: calc(100vh - 128px - 2rem);
+  min-height: calc(100vh - 128px - 1.5rem);
 }
 
 .resume .column-bright{
   background: white;
-  height: calc(100vh - 128px);
+  min-height: calc(100vh - 128px - 1.5rem);
   padding: 0 3rem;
 }
 
 .resume .column-dark{
   background: #141414;
-  height: calc(100vh - 128px);
+  min-height: calc(100vh - 128px - 1.5rem);
   padding: 0 3rem;
+}
+
+.resume .column-bright.about{
+  padding: 3rem;
+}
+.resume .column-bright.about h4{
+  font-size: 6vw;
+  font-weight: 900;
+}
+.resume .column-bright.about p{
+  font-size: 1.6rem;
+  padding-top: 4rem;
+}
+
+.resume .column-bright.about a{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding-right: 3rem;
+  padding-bottom: 0.5rem;
+}
+
+blockquote {
+  padding-left: 1rem;
+  margin-top: 7rem;
+  border-left: 3px solid #008080;
 }
 
 .aligned{
