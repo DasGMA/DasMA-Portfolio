@@ -18,38 +18,76 @@ function Resume() {
                      <a>Traditional resume</a>
                   </div>
                </Row>
-               <Row className = 'resume-row'>
-                  <div className = 'col s12 m6 valign-wrapper column-bright centered'>
-                     <h1>EXPE<br/>RIEN<br/>CE</h1>
-                     
-                  </div>
-                  <div className = 'col s12 m6 white-text column-dark aligned'>
-                     <div className = 'jobs'>
-                        <div className = 'date'>2016 - 2017</div>
-                        <div className = 'position'>Project Manager</div>
-                        <div className = 'company'>IT - iTech LLC</div>
-                        <div className = 'responsibility'>Business Project Manager | Developed Web Solution</div>
+
+               <div>
+               {/* Desktop view */}
+                  <Row className = 'hide-on-small-and-down'>
+                     <div className = 'col s12 m6 valign-wrapper column-bright centered'>
+                        <h1>EXPE<br/>RIEN<br/>CE</h1>
+                        
                      </div>
-                     <div className = 'jobs'>
-                        <div className = 'date'>Dec. 2014 - Jan. 2016</div>
-                        <div className = 'position'>Professional Development</div>
-                        <div className = 'company'>PRINCE2 | PMP | PSM</div>
-                        <div className = 'responsibility'>Acquired Project Management Certifications</div>
+                     <div className = 'col s12 m6 white-text column-dark aligned'>
+                        <div className = 'jobs'>
+                           <div className = 'date'>2016 - 2017</div>
+                           <div className = 'position'>Project Manager</div>
+                           <div className = 'company'>IT - iTech LLC</div>
+                           <div className = 'responsibility'>Business Project Manager | Developed Web Solution</div>
+                        </div>
+                        <div className = 'jobs'>
+                           <div className = 'date'>Dec. 2014 - Jan. 2016</div>
+                           <div className = 'position'>Professional Development</div>
+                           <div className = 'company'>PRINCE2 | PMP | PSM</div>
+                           <div className = 'responsibility'>Acquired Project Management Certifications</div>
+                        </div>
+                        <div className = 'jobs'>
+                           <div className = 'date'>2011 - 2014</div>
+                           <div className = 'position'>Business Owner</div>
+                           <div className = 'company'>Connect World LTD</div>
+                           <div className = 'responsibility'>Business Project Manager | Developed Web Solution</div>
+                        </div>
+                        <div className = 'jobs'>
+                           <div className = 'date'>2005 - 2014</div>
+                           <div className = 'position'>Project Manager | Assistant Manager</div>
+                           <div className = 'company'>Blue Boar Group</div>
+                           <div className = 'responsibility'>Hotel Expansion Project Manager</div>
+                        </div>
                      </div>
-                     <div className = 'jobs'>
-                        <div className = 'date'>2011 - 2014</div>
-                        <div className = 'position'>Business Owner</div>
-                        <div className = 'company'>Connect World LTD</div>
-                        <div className = 'responsibility'>Business Project Manager | Developed Web Solution</div>
+                  </Row>
+
+                  {/* Mobile and tablet view */}
+                  <Row className = 'show-on-small'>
+                     <div className = 'col s12' style = {{background: 'white', padding: '0'}}>
+                        <h1 style = {{fontSize: '2rem', margin: '0', padding: '0.5rem 3rem'}}>EXPERIENCE</h1>
+                        
                      </div>
-                     <div className = 'jobs'>
-                        <div className = 'date'>2005 - 2014</div>
-                        <div className = 'position'>Project Manager | Assistant Manager</div>
-                        <div className = 'company'>Blue Boar Group</div>
-                        <div className = 'responsibility'>Hotel Expansion Project Manager</div>
+                     <div className = 'col s12 column-dark' style = {{paddingTop: '1rem'}}>
+                        <div className = 'jobs' style = {{paddingBottom: '1.3rem'}}>
+                           <div className = 'date' style = {{fontSize: '1rem'}}>2016 - 2017</div>
+                           <div className = 'position' style = {{fontSize: '1rem'}}>Project Manager</div>
+                           <div className = 'company' style = {{fontSize: '1rem', marginTop: '0'}}>IT - iTech LLC</div>
+                           
+                        </div>
+                        <div className = 'jobs' style = {{paddingBottom: '1.3rem'}}>
+                           <div className = 'date' style = {{fontSize: '1rem'}}>2014 - 2016</div>
+                           <div className = 'position' style = {{fontSize: '1rem'}}>Professional Development</div>
+                           <div className = 'company' style = {{fontSize: '1rem', marginTop: '0'}}>PRINCE2 | PMP | PSM</div>
+                           
+                        </div>
+                        <div className = 'jobs' style = {{paddingBottom: '1.3rem'}}>
+                           <div className = 'date' style = {{fontSize: '1rem'}}>2011 - 2014</div>
+                           <div className = 'position' style = {{fontSize: '1rem'}}>Business Owner</div>
+                           <div className = 'company' style = {{fontSize: '1rem', marginTop: '0'}}>Connect World LTD</div>
+                           
+                        </div>
+                        <div className = 'jobs' style = {{paddingBottom: '1.3rem'}}>
+                           <div className = 'date' style = {{fontSize: '1rem'}}>2005 - 2014</div>
+                           <div className = 'position' style = {{fontSize: '1rem'}}>Project Manager | Assistant Manager</div>
+                           <div className = 'company' style = {{fontSize: '1rem', marginTop: '0'}}>Blue Boar Group</div>
+                           
+                        </div>
                      </div>
-                  </div>
-               </Row>
+                  </Row>
+               </div>
                
                <div>
                {/* Desktop view */}
