@@ -15,6 +15,7 @@ class Blog extends Component {
 
         return (
             <Container>
+            <img className = 'bg' style = {{background: '#0B0B0B'}} alt = 'Blog' />
                 { renderPosts }
             </Container>
         )

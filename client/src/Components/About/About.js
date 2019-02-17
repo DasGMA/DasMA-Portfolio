@@ -4,7 +4,7 @@ import { Container, Row, Col } from 'react-materialize';
 function About() {
     return (
         <Container>
-         <img src={require ('../../Media/Screen.png')} className = 'bg' alt = 'About' />
+         <img className = 'bg' style = {{background: '#0B0B0B'}} alt = 'About me' />
             <Row>
                 <Col s={3} style = {{background: '#000'}}>
                     <p></p>
