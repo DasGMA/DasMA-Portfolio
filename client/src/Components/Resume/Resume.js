@@ -1,24 +1,43 @@
 import React from 'react';
 import { Container, Row, Carousel } from 'react-materialize';
+import pdf from '../../Documents/DasMa.pdf';
 
 function Resume() {
     return (
         <Container className = 'resume'>
              <img className = 'bg' style = {{background: '#0B0B0B'}} alt = 'Home page' />
             <Carousel options = {{fullWidth: true, indicators: true}}>
-               <Row className = 'resume-row'>
-                  <div className = 'col s12 m6 white-text valign-wrapper column-dark'>
-                     <img src = '' alt = 'Das MA'/>
-                  </div>
-                  <div className = 'col s12 m6 lighten-4 column-bright about'>
-                     <h4>Das MA</h4>
-                     <div style={{fontSize: '1.2rem'}} className = 'position'>Software Developer | Project Manager</div>
-                     <p>Born in Lithuania. British.<br/>Currently living in California,<br/>Long Beach.</p>
-                     <blockquote>Simplicity is the soul of efficiency.</blockquote>
-                     <a>Traditional resume</a>
-                  </div>
-               </Row>
 
+               {/* About me slide */}
+               <div>
+                  {/* Desktop view */}
+                  <Row className = 'hide-on-small-and-down'>
+                     <div className = 'col s12 m6 white-text column-dark'>
+                        <img src = {require ('../../Media/DasMA.png')} alt = 'Das MA' style = {{paddingTop: '3rem'}}/>
+                     </div>
+                     <div className = 'col s12 m6 lighten-4 column-bright about'>
+                        <h4>Das MA</h4>
+                        <div style={{fontSize: '1.2rem'}} className = 'position'>Software Developer | Project Manager</div>
+                        <p>Born in Lithuania. British.<br/>Currently living in California,<br/>Long Beach.</p>
+                        <blockquote>Simplicity is the soul of efficiency.</blockquote>
+                        <a href = {pdf} target = '_blank' rel="noopener noreferrer">Traditional resume</a>
+                     </div>
+                  </Row>
+                  {/* Mobile and tablet view */}
+                  <Row className = 'show-on-small'>
+                     <div className = 'col s12 white-text' style = {{background: 'black', padding: '0'}}>
+                        <h1 style = {{fontSize: '2rem', margin: '0', padding: '0.5rem 3rem'}}>Das MA</h1>
+                     </div>
+                     <div className = 'col s12 column-bright about' style = {{paddingTop: '1rem'}}>
+                        <div style={{fontSize: '1.2rem'}} className = 'position'>Software Developer | Project Manager</div>
+                        <p style = {{paddingTop: '2rem', fontSize: '1rem'}}>Born in Lithuania. British.<br/>Currently living in California,<br/>Long Beach.</p>
+                        <blockquote style = {{marginTop: '4rem'}}>Simplicity is the soul of efficiency.</blockquote>
+                        <a href = {pdf} target = '_blank' rel="noopener noreferrer">Traditional resume</a>
+                     </div>
+                  </Row>
+               </div>
+
+               {/* Experience slide */}
                <div>
                {/* Desktop view */}
                   <Row className = 'hide-on-small-and-down'>
@@ -89,11 +108,12 @@ function Resume() {
                   </Row>
                </div>
                
+               {/* Education slide */}
                <div>
                {/* Desktop view */}
                   <Row className = 'resume-row hide-on-small-and-down'>
                      <div className = 'col s12 m6 white-text valign-wrapper column-dark centered'>
-                        <h1>EDUC<br/>CATI<br/>ON</h1>
+                        <h1>EDU<br/>CAT<br/>ION</h1>
                      </div>
                      <div className = 'col s12 m6 column-bright aligned'>
                         <div className = 'jobs'>
@@ -128,6 +148,7 @@ function Resume() {
                   </Row>
                </div>
 
+              {/* Skills slide */}
                <div>
                   {/* Desktop view */}
                   <Row className = 'resume-row hide-on-small-and-down'>

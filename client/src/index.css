@@ -69,6 +69,7 @@ a.navi:hover {
 
 li a.navi.active {
   background: #383838;
+  color: #fff;
 }
 
 
@@ -267,6 +268,7 @@ li a.navi.active {
   font-weight: bold;
 }
 
+
 .carousel.carousel-slider {
   min-height: calc(100vh - 128px - 1.5rem);
 }
@@ -298,9 +300,10 @@ li a.navi.active {
 .resume .column-bright.about a{
   position: absolute;
   bottom: 0;
-  right: 0;
-  padding-right: 3rem;
-  padding-bottom: 0.5rem;
+  left: 50%;
+  padding-left: 3rem;
+  padding-bottom: 3.5rem;
+  cursor: pointer;
 }
 
 blockquote {
@@ -374,3 +377,13 @@ blockquote {
   letter-spacing: 0.2rem;
   margin-top: 0.5rem;
 }
+
+/* Projects page styling */
+
+
+
+
+
+
+/* About me page styling */
+
