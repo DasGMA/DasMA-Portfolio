@@ -1,16 +1,13 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const BlogPost = (props) => {
     
         return (
                 <div>
-                    <Link  to={`/blogPost/${props.id}`}>
-                    <div>{props.title}</div>
-                    </Link>
-                    <div className="card-body">
-                        {props.content}
-                    </div>
+                    <div>{props.category}</div>
+                    <Link  to={`/blogPost/${props.id}`}><div>{props.title}</div></Link>
+                    <div>{props.content}</div>
                 </div>
          );
     

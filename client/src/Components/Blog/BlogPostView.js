@@ -4,7 +4,7 @@ import axios from 'axios';
 /* import DeleteModal from './DeleteModal';
 import { MarkdownPreview } from 'react-marked-markdown'; */
 
-const URL = 'https://das-ma.herokuapp.com/notes/';
+const URL = 'https://dasma-blog.herokuapp.com/posts';
 
 class BlogPostView extends Component {
     constructor(props) {
@@ -12,12 +12,14 @@ class BlogPostView extends Component {
         this.state = {
             id: '',
             title: '',
-            content: ''         
+            content: '',
+            category: '',
+            created_at: '',
+            postedBy: ''        
          }
     }
 
     componentDidMount() {
-        
         let id = Number(this.props.match.params.id);
         axios.get(URL)
             .then(response => {
@@ -25,7 +27,10 @@ class BlogPostView extends Component {
                 this.setState({
                     title: matching.title,
                     content: matching.content,
-                    id: matching.id
+                    id: matching.id,
+                    category: matching.category,
+                    created_at: matching.created_at,
+                    postedBy: matching.postedBy
                 })
             })
             .catch(err => {
@@ -49,19 +54,15 @@ class BlogPostView extends Component {
     render() {
         
         return ( 
-            
-            <Container>
                 <div>
                     <div>
-                        <Button><Link to={`/edit-post/${this.state.id}`}> Edit </Link></Button>
+                        <div className = 'button'><Link to={`/edit-post/${this.state.id}`}> Edit </Link></div>
                         <Modal delete={() => this.delete(this.state.id)} title={this.state.title}/>
                     </div>
                     <h1>{this.state.title}</h1>
                 {/*  <MarkdownPreview className='mark' value={this.state.content} /> */}
-                    <Button><Link to={`/blogPosts`}>Back to Blog Posts</Link></Button>
+                    <div className = 'button'><Link to={`/blogPosts`}>Back to Blog Posts</Link></div>
                 </div>
-            </Container>
-            
          );
     }
 }

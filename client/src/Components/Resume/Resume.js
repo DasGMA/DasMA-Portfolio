@@ -118,7 +118,7 @@ function Resume() {
                      <div className = 'col s12 m6 column-bright aligned'>
                         <div className = 'jobs'>
                            <div className = 'date'>2018 - 2019</div>
-                           <div className = 'position'>Software Developer</div>
+                           <div className = 'position'>Full Stack Software Development</div>
                            <div className = 'school'>Lambda School</div>
                         </div>
                         <div className = 'jobs'>
@@ -136,7 +136,7 @@ function Resume() {
                      <div className = 'col s12 column-bright' style = {{paddingTop: '1rem'}}>
                         <div className = 'jobs'>
                            <div className = 'date'>2018 - 2019</div>
-                           <div className = 'position'>Software Developer</div>
+                           <div className = 'position'>Full Stack Software Development</div>
                            <div className = 'school'>Lambda School</div>
                         </div>
                         <div className = 'jobs'>
@@ -158,23 +158,19 @@ function Resume() {
                      <div className = 'col s12 m6 white-text column-dark aligned'>
                         <div className = 'jobs'>
                            <div className = 'techTools'>Front End</div>
-                           <div className = 'techToolsList'>CSS3, HTML5, JavaScript, React.js,<br/>Front-end development<br/>Responsive design</div>
+                           <div className = 'techToolsList'>CSS3, HTML5, JavaScript, React.js,<br/>Responsive design</div>
                         </div>
                         <div className = 'jobs'>
                            <div className = 'techTools'>Back End</div>
-                           <div className = 'techToolsList'>Node.js, Express.js, SQLite, Django, Python,<br/>Back-end development </div>
+                           <div className = 'techToolsList'>Node.js, Express.js, SQLite, Django, Python </div>
                         </div>
                         <div className = 'jobs'>
                            <div className = 'techTools'>Industry Knowledge</div>
-                           <div className = 'techToolsList'>Agile & Scrum methodologies, PRINCE2,<br/>Requirements gathering, SDLC<br/>Vendor management </div>
+                           <div className = 'techToolsList'>Agile & Scrum methodologies, PRINCE2,<br/>Requirements gathering, SDLC </div>
                         </div>
                         <div className = 'jobs'>
                            <div className = 'techTools'>Tools</div>
                            <div className = 'techToolsList'>Git, VS Code, Postman,<br/>Microsoft Project, Jira, Linux </div>
-                        </div>
-                        <div className = 'jobs'>
-                           <div className = 'techTools'>Interpersonal Skills</div>
-                           <div className = 'techToolsList'>Collaborative, Active Listener,<br/>Diverse, Problem Solver  </div>
                         </div>
                      </div>
                   </Row>
@@ -195,15 +191,11 @@ function Resume() {
                         </div>
                         <div className = 'jobs' style = {{paddingBottom: '0.5rem'}}>
                            <div className = 'techTools' style = {{fontSize: '5vw'}}>Industry Knowledge</div>
-                           <div className = 'techToolsList' style = {{fontSize: '3vw'}}>Agile & Scrum methodologies, PRINCE2, Requirements gathering, SDLC, Vendor management </div>
+                           <div className = 'techToolsList' style = {{fontSize: '3vw'}}>Agile & Scrum methodologies, PRINCE2, Requirements gathering, SDLC </div>
                         </div>
                         <div className = 'jobs' style = {{paddingBottom: '0.5rem'}}>
                            <div className = 'techTools' style = {{fontSize: '5vw'}}>Tools</div>
                            <div className = 'techToolsList' style = {{fontSize: '3vw'}}>Git, VS Code, Postman, Microsoft Project, Jira, Linux </div>
-                        </div>
-                        <div className = 'jobs' style = {{paddingBottom: '0.5rem'}}>
-                           <div className = 'techTools' style = {{fontSize: '5vw'}}>Interpersonal Skills</div>
-                           <div className = 'techToolsList' style = {{fontSize: '3vw'}}>Collaborative, Active Listener, Diverse, Problem Solver  </div>
                         </div>
                      </div>
                   </Row>
