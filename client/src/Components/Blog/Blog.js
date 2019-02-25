@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { Route, StaticRouter } from 'react-router-dom';
 import { Container, Row, Col } from 'react-materialize';
 import Search from './Search';
 import BlogPost from './BlogPost';
+import EditBlogPost from './BlogPostView';
+import BlogPostView from './EditBlogPost';
 
 const URL = 'https://dasma-blog.herokuapp.com/posts';
 
@@ -12,16 +15,17 @@ class Blog extends Component {
         this.state = {
             posts: [],
             search: '',
-            searchedPosts: []
+            searchPosts: []
         }
     }
 
     componentDidMount () {
         axios.get(URL)
         .then(response => {
+            console.log(response.data)
             this.setState({
                 posts: response.data,
-                searchedPosts: response.data
+                searchPosts: response.data
             })
         })
         .catch(error => {
@@ -32,19 +36,19 @@ class Blog extends Component {
     handleSearch = (event) => {
         this.setState ({
           search: event.target.value,
-          posts: this.state.searchedPosts.filter((post) => 
+          posts: this.state.searchPosts.filter((post) => 
             new RegExp(event.target.value, "i").exec(post.title))
         });
     }
 
-
-
-
     render() {
         const { posts, search } = this.state;
         const layout =  <Row>
-                            <Col s={12} m={3} style = {{textAlign: 'center', color: '#fff', border: '1px solid yellow'}}> Categories </Col>
-                            <Col s={12} m={9} style = {{textAlign: 'center', color: '#fff', border: '1px solid yellow'}}>
+                            <Col s={12} m={3} style = {{color: '#fff', border: '1px solid yellow'}}>
+                             Categories 
+                            </Col>
+
+                            <Col s={12} m={9} style = {{color: '#fff', border: '1px solid yellow'}}>
                                 {posts.map(post => {
                                     return (
                                         <BlogPost
@@ -55,7 +59,9 @@ class Blog extends Component {
                                             category = {post.category}
                                         />
                                     )
-                                })} 
+                                })}
+                                <Route path='/edit-post/:id' component = {EditBlogPost} />
+                                <Route path='/blogPost/:id' component = {BlogPostView}/>
                             </Col>
                         </Row>
 
