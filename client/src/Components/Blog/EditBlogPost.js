@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Form, FormGroup, Label, Col, Input, Button, Container } from 'react-materialize';
 
 
-const URL = 'https://das-ma.herokuapp.com/posts/';
+const URL = 'https://dasma-blog.herokuapp.com/posts/';
 
 
 class EditBlogPost extends Component {
@@ -47,11 +47,11 @@ componentDidMount () {
             content: this.state.content,
             category: this.state.category
         }
-        axios.put(`${URL}${this.state.id}`, updatedPost)
+        axios.put(`${URL}${this.state.id}/update`, updatedPost)
         .then(response => {
             console.log(response);
             console.log(response.data);
-            window.location = '/posts';
+            window.location = '/blog';
         })
         .catch(error => {
             console.log(error);

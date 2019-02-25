@@ -4,7 +4,7 @@ import axios from 'axios';
 /* import DeleteModal from './DeleteModal';
 import { MarkdownPreview } from 'react-marked-markdown'; */
 
-const URL = 'https://dasma-blog.herokuapp.com/posts';
+const URL = 'https://dasma-blog.herokuapp.com/posts/';
 
 class BlogPostView extends Component {
     constructor(props) {
@@ -14,7 +14,6 @@ class BlogPostView extends Component {
             title: '',
             content: '',
             category: '',
-            created_at: '',
             postedBy: ''        
          }
     }
@@ -23,13 +22,13 @@ class BlogPostView extends Component {
         let id = Number(this.props.match.params.id);
         axios.get(URL)
             .then(response => {
-                let matching = response.data.find(blogPost => blogPost.id === id);
+                console.log(response.data)
+                let matching = response.data.find(post => post.id === id);
                 this.setState({
                     title: matching.title,
                     content: matching.content,
                     id: matching.id,
                     category: matching.category,
-                    created_at: matching.created_at,
                     postedBy: matching.postedBy
                 })
             })
@@ -39,12 +38,12 @@ class BlogPostView extends Component {
     }
 
     delete = (id) => {
-        axios.delete(`${URL}${id}`)
+        axios.delete(`${URL}${id}/delete`)
         .then(response => {
             this.setState({
                 posts: response.data
             })
-            window.location = '/posts';
+            window.location = '/blog';
         })
         .catch(error => {
           console.log(error);
@@ -57,11 +56,11 @@ class BlogPostView extends Component {
                 <div>
                     <div>
                         <div className = 'button'><Link to={`/edit-post/${this.state.id}`}> Edit </Link></div>
-                        <Modal delete={() => this.delete(this.state.id)} title={this.state.title}/>
+                        <div className = "button" onClick={() => this.delete(this.state.id)} title={this.state.title}>Delete</div>
                     </div>
                     <h1>{this.state.title}</h1>
                 {/*  <MarkdownPreview className='mark' value={this.state.content} /> */}
-                    <div className = 'button'><Link to={`/blogPosts`}>Back to Blog Posts</Link></div>
+                    <div className = 'button'><Link to={`/blog`}>Back</Link></div>
                 </div>
          );
     }
