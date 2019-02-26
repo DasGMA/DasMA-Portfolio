@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-import { Form, FormGroup, Label, Col, Input, Button } from 'react-materialze';
 
 
-const URL = 'https://das-ma.herokuapp.com/posts/add/';
+const URL = 'https://dasma-blog.herokuapp.com/posts/add/';
 
 class NewBlogPost extends Component {
     constructor(props) {
@@ -30,7 +29,7 @@ class NewBlogPost extends Component {
           .then(response => {
             console.log(response);
             console.log(response.data);
-            window.location = '/posts';
+            window.location = '/blog';
           })
           .catch(error => {
             console.log(error);
@@ -46,28 +45,28 @@ class NewBlogPost extends Component {
         const {title, content, category} = this.state;
        
         return ( 
-                <Form>
-                <h1>Add new note</h1>
-                    <FormGroup row >
-                            <Label for="category" sm={2} size="lg">Category</Label>
-                                <Col sm={12}>
-                                    <Input type="text" name="category" placeholder="Post category" value={category} onChange={(event) => this.change(event)} />
-                                </Col>
-                    </FormGroup>
-                    <FormGroup row >
-                        <Label for="title" sm={2} size="lg">Title</Label>
-                            <Col sm={12}>
-                                <Input type="text" name="title" placeholder="Post title" value={title} onChange={(event) => this.change(event)} />
-                            </Col>
-                    </FormGroup>
-                    <FormGroup row>
-                        <Label for="content" sm={2} size="lg">Content</Label>
-                            <Col sm={12}>
-                                <Input type="textarea" name="content"  placeholder="Post content" value={content}  onChange={(event) => this.change(event)} />
-                            </Col>
-                    </FormGroup>
-                    <Button type='submit' onClick={this.addPost}>Save</Button>
-                </Form>
+                <div>
+                <h1>Add New Blog Post</h1>
+                    <div>
+                            <div>Category</div>
+                                <div>
+                                    <input type="text" name="category" placeholder="Post category" value={category} onChange={(event) => this.change(event)} />
+                                </div>
+                    </div>
+                    <div >
+                        <div>Title</div>
+                            <div>
+                                <input type="text" name="title" placeholder="Post title" value={title} onChange={(event) => this.change(event)} />
+                            </div>
+                    </div>
+                    <div>
+                        <div>Content</div>
+                            <div>
+                                <input type="textarea" name="content"  placeholder="Post content" value={content}  onChange={(event) => this.change(event)} />
+                            </div>
+                    </div>
+                    <div className = 'button' type='submit' onClick={this.addPost}>Save</div>
+                </div>
          );
     }
 }

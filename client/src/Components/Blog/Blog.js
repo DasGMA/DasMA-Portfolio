@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Route, StaticRouter } from 'react-router-dom';
-import { Container, Row, Col } from 'react-materialize';
+import { Link } from 'react-router-dom';
+import { Container, Row, Col, Button } from 'react-materialize';
 import Search from './Search';
 import BlogPost from './BlogPost';
-import EditBlogPost from './BlogPostView';
-import BlogPostView from './EditBlogPost';
 
 const URL = 'https://dasma-blog.herokuapp.com/posts';
 
@@ -60,15 +58,16 @@ class Blog extends Component {
                                         />
                                     )
                                 })}
-                                <Route path='/edit-post/:id' component = {EditBlogPost} />
-                                <Route path='/blogPost/:id' component = {BlogPostView}/>
                             </Col>
                         </Row>
 
         return (
             <Container>
             <img className = 'bg' style = {{background: '#0B0B0B'}} alt = 'Blog' />
-                <Search handleSearch = {this.handleSearch} search = {search}/>
+            <Row>
+                <Col s={10}><Search handleSearch = {this.handleSearch} search = {search}/></Col>
+                <Col s={2}><Button><Link to = '/newPost'>New Post</Link></Button></Col>
+            </Row>
                 { layout }
             </Container>
         )
