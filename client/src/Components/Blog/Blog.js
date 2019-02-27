@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { Link, Route } from 'react-router-dom';
 import { Container, Row, Col, Button } from 'react-materialize';
 import Search from './Search';
 import BlogPost from './BlogPost';
+import BlogPostView from './BlogPostView';
 
 const URL = 'https://dasma-blog.herokuapp.com/posts';
 
@@ -43,7 +44,7 @@ class Blog extends Component {
         const { posts, search } = this.state;
         const layout =  <Row>
                             <Col s={12} m={3} style = {{color: '#fff', border: '1px solid yellow'}}>
-                             Categories 
+                             Categories
                             </Col>
 
                             <Col s={12} m={9} style = {{color: '#fff', border: '1px solid yellow'}}>
@@ -58,16 +59,15 @@ class Blog extends Component {
                                         />
                                     )
                                 })}
+                            <Route path = {`${this.props.match.path}/blogPost/:id`} component = { BlogPostView } />
                             </Col>
                         </Row>
 
         return (
             <Container>
             <img className = 'bg' style = {{background: '#0B0B0B'}} alt = 'Blog' />
-            <Row>
-                <Col s={10}><Search handleSearch = {this.handleSearch} search = {search}/></Col>
-                <Col s={2}><Button><Link to = '/newPost'>New Post</Link></Button></Col>
-            </Row>
+                <Search handleSearch = {this.handleSearch} search = {search}/>
+                <Row><Col><Button><Link to = '/admin_login'>Admin Login</Link> </Button></Col></Row>
                 { layout }
             </Container>
         )
