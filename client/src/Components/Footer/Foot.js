@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-materialize';
-import { Link } from 'react-router-dom';
+/* import { Link } from 'react-router-dom'; */
 
 function Foot() {
     return(
