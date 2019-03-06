@@ -6,7 +6,7 @@ function About() {
         <Container style = {{paddingTop: '1rem'}}>
          <img className = 'bg' style = {{background: '#0B0B0B'}} alt = 'About me' />
             <Row>
-                <Col style = {{fontSize: '1.6rem'}}>
+                <Col style = {{fontSize: '1.6rem', color: '#fff'}}>
                     As a software developer, my prior knowledge in project management makes me an asset for any product-minded team.
                     I've spent the past 9 months learning web development and computer science at Lambda School, an innovative software engineering academy.
                     I hope to use my education and experience to provide a unique perspective when designing software solutions for customers.
