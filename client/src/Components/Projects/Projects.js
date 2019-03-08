@@ -2,22 +2,23 @@ import React, { Component } from 'react';
 import { Container, Row } from 'react-materialize';
 import Project from './Project';
 import gol from '../../Media/gameoflife.png';
+import mud from '../../Media/mud.jpg';
 
 class Projects extends Component {
     state = {
         projects: [
             {
                 'title': 'On The Record',
-                'link': '',
+                'link': 'http://www.ontherecord.us',
                 'description': '',
                 'image': ''
 
             },
             {
                 'title': 'MUD Game',
-                'link': '',
+                'link': 'https://zen-brattain-ef374b.netlify.com/',
                 'description': '',
-                'image': ''
+                'image': mud
             },
             {
                 'title': 'Conways Life',
@@ -32,8 +33,7 @@ class Projects extends Component {
             <Container>
             <img className = 'bg' style = {{background: '#0B0B0B'}} alt = 'Projects' />
                 <Row style = {{color: '#fff'}}><h1>Projects</h1></Row>
-                {this.state.projects.map(project => {
-                    return (
+                {this.state.projects.map(project => (
                         <Project 
                             key = {project.id}
                             title = {project.title}
@@ -41,8 +41,7 @@ class Projects extends Component {
                             image = {project.image}
                             link = {project.link}
                         />
-                    )
-                })}
+                ))}
             </Container>
         )
     }

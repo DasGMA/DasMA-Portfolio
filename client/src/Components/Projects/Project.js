@@ -1,6 +1,5 @@
 import React from 'react';
 import { Card, CardTitle, Row, Col } from 'react-materialize';
-import { Link } from 'react-router-dom';
 
 function Project(props) {
     return(
@@ -11,7 +10,7 @@ function Project(props) {
                     header = {<CardTitle reveal image = {props.image} waves = 'light' />}
                     title = {props.title}
                     reveal = {props.description}>
-                    <p>Link to working app: <Link to = {props.link}>Game Of Life</Link></p>
+                    <p>Link to working app: <a href = {props.link} target = '_blank' rel = 'noopener noreferrer'>{props.title}</a></p>
                 </Card>
             </Col>
             <Col l={1}></Col>
