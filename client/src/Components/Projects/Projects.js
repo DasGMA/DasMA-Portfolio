@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { Container, Row } from 'react-materialize';
+import { Container, Row, Col } from 'react-materialize';
 import Project from './Project';
 import gol from '../../Media/gameoflife.png';
 import mud from '../../Media/mud.jpg';
+import ontherecord from '../../Media/ontherecord.png';
 
 class Projects extends Component {
     state = {
@@ -11,7 +12,7 @@ class Projects extends Component {
                 'title': 'On The Record',
                 'link': 'http://www.ontherecord.us',
                 'description': '',
-                'image': ''
+                'image': ontherecord
 
             },
             {
@@ -32,7 +33,11 @@ class Projects extends Component {
         return (
             <Container>
             <img className = 'bg' style = {{background: '#0B0B0B'}} alt = 'Projects' />
-                <Row style = {{color: '#fff'}}><h1>Projects</h1></Row>
+                <Row style = {{color: '#fff'}}>
+                    <Col l={1}></Col>
+                    <Col l={10} s={12} m={12}><h1>Projects</h1></Col>
+                    <Col l={1}></Col>
+                </Row>
                 {this.state.projects.map(project => (
                         <Project 
                             key = {project.id}
