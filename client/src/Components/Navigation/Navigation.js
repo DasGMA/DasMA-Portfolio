@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 function Navigation() {
     return (
         <header>
-            <Container>
+            <Container style = {{borderBottom: '1px solid grey'}}>
                 <Navbar right brand = 'DM' className = 'transparent z-depth-0'>
                     <li><NavLink className = 'navi' to = '/about'>About</NavLink></li>
                     <li><NavLink className = 'navi' to = '/resume'>Resume</NavLink></li>
