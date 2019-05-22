@@ -62,7 +62,7 @@ function Resume() {
                            <div className = 'date'>2011 - 2014</div>
                            <div className = 'position'>Business Owner</div>
                            <div className = 'company'>Connect World LTD</div>
-                           <div className = 'responsibility'>Business Project Coordinator | Developed Web Solution</div>
+                           <div className = 'responsibility'>Business Owner</div>
                         </div>
                         <div className = 'jobs'>
                            <div className = 'date'>2005 - 2014</div>
@@ -158,19 +158,19 @@ function Resume() {
                      <div className = 'col s12 m6 white-text column-dark aligned'>
                         <div className = 'jobs'>
                            <div className = 'techTools'>Front End</div>
-                           <div className = 'techToolsList'>CSS3, HTML5, JavaScript, React.js,<br/>Responsive design</div>
+                           <div className = 'techToolsList'>CSS3, HTML5, JavaScript, React.js,<br/>Bootstrap, Materialize, LESS, Styled</div>
                         </div>
                         <div className = 'jobs'>
                            <div className = 'techTools'>Back End</div>
                            <div className = 'techToolsList'>Node.js, Express.js, SQLite, Django, Python </div>
                         </div>
                         <div className = 'jobs'>
-                           <div className = 'techTools'>Industry Knowledge</div>
-                           <div className = 'techToolsList'>Agile & Scrum methodologies, PRINCE2,<br/>Requirements gathering, SDLC </div>
+                           <div className = 'techTools'>Tools</div>
+                           <div className = 'techToolsList'>Git, VS Code, Postman,<br/>Microsoft Project, Jira, Linux <br/> Heroku, Netlify </div>
                         </div>
                         <div className = 'jobs'>
-                           <div className = 'techTools'>Tools</div>
-                           <div className = 'techToolsList'>Git, VS Code, Postman,<br/>Microsoft Project, Jira, Linux </div>
+                           <div className = 'techTools'>Project Management</div>
+                           <div className = 'techToolsList'>Agile & Scrum methodologies, PRINCE2,<br/>Requirements gathering, SDLC </div>
                         </div>
                      </div>
                   </Row>
@@ -183,19 +183,19 @@ function Resume() {
                      <div className = 'col s12 column-dark' style = {{paddingTop: '1rem'}}>
                         <div className = 'jobs' style = {{paddingBottom: '0.5rem'}}>
                            <div className = 'techTools' style = {{fontSize: '5vw'}}>Front End</div>
-                           <div className = 'techToolsList' style = {{fontSize: '3vw'}} >CSS3, HTML5, JavaScript, React.js, Front-end development, Responsive design</div>
+                           <div className = 'techToolsList' style = {{fontSize: '3vw'}} >CSS3, HTML5, JavaScript, React.js, Bootstrap, Materialize, LESS, Styled</div>
                         </div>
                         <div className = 'jobs' style = {{paddingBottom: '0.5rem'}}>
                            <div className = 'techTools' style = {{fontSize: '5vw'}}>Back End</div>
                            <div className = 'techToolsList' style = {{fontSize: '3vw'}}>Node.js, Express.js, SQLite, Django, Python, Back-end development </div>
                         </div>
                         <div className = 'jobs' style = {{paddingBottom: '0.5rem'}}>
-                           <div className = 'techTools' style = {{fontSize: '5vw'}}>Industry Knowledge</div>
-                           <div className = 'techToolsList' style = {{fontSize: '3vw'}}>Agile & Scrum methodologies, PRINCE2, Requirements gathering, SDLC </div>
+                           <div className = 'techTools' style = {{fontSize: '5vw'}}>Tools</div>
+                           <div className = 'techToolsList' style = {{fontSize: '3vw'}}>Git, VS Code, Postman, Microsoft Project, Jira, Linux, Heroku, Netlify </div>
                         </div>
                         <div className = 'jobs' style = {{paddingBottom: '0.5rem'}}>
-                           <div className = 'techTools' style = {{fontSize: '5vw'}}>Tools</div>
-                           <div className = 'techToolsList' style = {{fontSize: '3vw'}}>Git, VS Code, Postman, Microsoft Project, Jira, Linux </div>
+                           <div className = 'techTools' style = {{fontSize: '5vw'}}>Project Management</div>
+                           <div className = 'techToolsList' style = {{fontSize: '3vw'}}>Agile & Scrum methodologies, PRINCE2, Requirements gathering, SDLC </div>
                         </div>
                      </div>
                   </Row>
