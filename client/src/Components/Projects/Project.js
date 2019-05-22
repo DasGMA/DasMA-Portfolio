@@ -10,7 +10,7 @@ function Project(props) {
                     header = {<CardTitle reveal image = {props.image} waves = 'light' />}
                     title = {props.title}
                     reveal = {props.description}>
-                    <p>Link to working app: <a href = {props.link} target = '_blank' rel = 'noopener noreferrer'>{props.title}</a></p>
+                    <p>Link to app: <a href = {props.link} target = '_blank' rel = 'noopener noreferrer'>{props.title}</a></p>
                 </Card>
             </Col>
             <Col l={1}></Col>

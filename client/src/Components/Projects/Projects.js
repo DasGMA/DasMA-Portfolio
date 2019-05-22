@@ -17,7 +17,7 @@ class Projects extends Component {
             },
             {
                 'title': 'MUD Game',
-                'link': 'https://zen-brattain-ef374b.netlify.com/',
+                'link': 'https://dasma-mud.netlify.com/',
                 'description': '',
                 'image': mud
             },

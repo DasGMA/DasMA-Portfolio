@@ -7,16 +7,14 @@ function About() {
         <Container style = {{paddingTop: '1rem'}}>
          <img className = 'bg' style = {{background: '#0B0B0B'}} alt = 'About me' />
             <Row>
-                <Col m={3}></Col>
-                <Col m={6} s={12} style = {{fontSize: '1.6rem', color: '#fff'}}>
-                    <p>As a software developer, my prior knowledge in project management makes me an asset for any product-minded team.
-                    I've spent the past 9 months learning web development and computer science at Lambda School, an innovative software engineering academy.</p>
-                    <p>I hope to use my education and experience to provide a unique perspective when designing software solutions for customers.
-                    I love to learn new frameworks and languages in order to keep my skill-set sharp and to ensure the applications I'm designing are the best fit for clients.</p>
-                    <p>Besides software development, I am Prince2 and Professional Agile & Scrum certified with over 5 years of experience as a coordinator/manager within information systems and the hospitality industry.</p>
+                <Col m={1}></Col>
+                <Col m={10} s={12} style = {{fontSize: '1.6rem', color: '#fff'}}>
+                    <p>Recent graduate from Lambda School – awesome Software Engineering Academy.</p>
+                    <p>I have over 1 year of experience as a software developer with prior experience in Project Management. While I am proficient full – stack engineer, my emphasis is in building front end services.</p>
+                    <p>I love building things. While hard engineering problems are often fun to tackle, I am most attracted to solving real customer problems with a business justification. I am looking for a junior software developer role where I can collaborate with a team, gain experience with architecture, apply my knowledge, and grow with the company.</p>
                     <p>Here you can find more information on my <Link to = '/projects'>projects</Link>.</p>
                 </Col>
-                <Col m={3}></Col>
+                <Col m={1}></Col>
             </Row>
         </Container>
     )

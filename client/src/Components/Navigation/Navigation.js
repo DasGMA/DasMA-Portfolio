@@ -10,6 +10,7 @@ function Navigation() {
                     <li><NavLink className = 'navi' to = '/about'>About</NavLink></li>
                     <li><NavLink className = 'navi' to = '/resume'>Resume</NavLink></li>
                     <li><NavLink className = 'navi' to = '/projects'>Projects</NavLink></li>
+                    <li><NavLink className = 'navi' to = '/contact'>Contact me</NavLink></li>
                     {/* <li><NavLink className = 'navi' to = '/blog'>Blog</NavLink></li> */}
                 </Navbar>
             </Container>
