@@ -7,6 +7,7 @@ import Resume from './Components/Resume/Resume';
 import Projects from './Components/Projects/Projects';
 /* import Blog from './Components/Blog/Blog'; */
 import Foot from './Components/Footer/Foot';
+import Contacts from './Components/Contacts/Contacts';
 
 class App extends Component {
   render() {
@@ -19,6 +20,7 @@ class App extends Component {
             <Route path = '/about' component = { About } />
             <Route path = '/resume' component = { Resume } />
             <Route path = '/projects' component = { Projects } />
+            <Route path = '/contact' component = { Contacts } />
             {/* <Route path = '/blog' component = { Blog } /> */}
           </Switch>
         </main>
