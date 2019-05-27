@@ -387,3 +387,17 @@ blockquote {
 
 /* About me page styling */
 
+/* Contact me */
+
+.contact {
+  background: white;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact .black{
+  background: black;
+}
+

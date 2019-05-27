@@ -48,7 +48,7 @@ class Projects extends Component {
                 <Row className = 'center' style = {{color: '#fff'}}><h1>Projects</h1></Row>
                 {this.state.projects.map(project => (
                         <Project 
-                            key = {project.id}
+                            key = {project.link + project.title}
                             title = {project.title}
                             description = {project.description}
                             image = {project.image}
