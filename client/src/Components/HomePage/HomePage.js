@@ -1,11 +1,11 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-materialize';
-import { Link } from 'react-router-dom';
+import dell from '../../Media/Dell.png';
 
 function HomePage() {
     return (
         <Container className = 'home-page center-align'>
-        <img src={require ('../../Media/Dell.png')} className = 'bg' alt = 'Home page' />
+        <img src={dell} className = 'bg' alt = 'Home page' />
             <Row className = 'blue-grey-text text-lighten-5 valign-wrapper'>
                 <Col s={12}>
                     <h1>Hi. I'm Das.</h1>
@@ -14,7 +14,7 @@ function HomePage() {
             </Row>
             <Row className = 'blue-grey-text text-lighten-5'>
                 <Col s={12} className = 'column'>
-                    <Link to = '/about'><i className="far fa-play-circle fa-5x meetme-icon"></i></Link>
+                    <button ><i className="far fa-play-circle fa-5x meetme-icon"></i></button>
                 </Col>
             </Row>
         </Container>

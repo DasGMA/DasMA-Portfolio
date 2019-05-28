@@ -16,9 +16,11 @@ main {
   flex: 1 0 auto;
 }
 
+p {
+  font-size: 1.2
+}
+
 /* Blurry image */
-
-
 img.bg {
   background: no-repeat center center fixed; 
   background-size: cover;
@@ -37,7 +39,7 @@ img.bg {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  margin: -10px;
+  margin: -15px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -138,7 +140,12 @@ li a.navi.active {
 }
 
 
-/* Home page media queries */
+/* Home page*/
+
+button {
+  background: transparent;
+  border: none;
+}
 
 .home-page{
   padding-top: 7rem;
@@ -154,6 +161,7 @@ li a.navi.active {
   font-size: 3vw;
 }
 
+/* Home page media queries */
 @media (min-width: 992px) {
   .home-page{
     padding-top: 15rem;
@@ -388,9 +396,8 @@ blockquote {
 /* About me page styling */
 
 /* Contact me */
-
 .contact {
-  background: white;
+  background: #fff;
   height: 200px;
   display: flex;
   align-items: center;
@@ -398,6 +405,6 @@ blockquote {
 }
 
 .contact .black{
-  background: black;
+  background: #000;
 }
 

@@ -6,6 +6,7 @@ function About() {
     return (
         <Container style = {{paddingTop: '1rem'}}>
          <img className = 'bg' style = {{background: '#0B0B0B'}} alt = 'About me' />
+         <Row className = 'center' style = {{color: '#fff'}}><h3>About Me</h3></Row>
             <Row>
                 <Col m={1}></Col>
                 <Col m={10} s={12} style = {{fontSize: '1.6rem', color: '#fff'}}>
