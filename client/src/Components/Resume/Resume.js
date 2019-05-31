@@ -162,7 +162,7 @@ function Resume() {
                         </div>
                         <div className = 'jobs'>
                            <div className = 'techTools'>Back End</div>
-                           <div className = 'techToolsList'>Node.js, Express.js, SQLite, Django, Python </div>
+                           <div className = 'techToolsList'>Node.js, Express.js, Knex, SQLite, Django, Python </div>
                         </div>
                         <div className = 'jobs'>
                            <div className = 'techTools'>Tools</div>
@@ -187,7 +187,7 @@ function Resume() {
                         </div>
                         <div className = 'jobs' style = {{paddingBottom: '0.5rem'}}>
                            <div className = 'techTools' style = {{fontSize: '5vw'}}>Back End</div>
-                           <div className = 'techToolsList' style = {{fontSize: '3vw'}}>Node.js, Express.js, SQLite, Django, Python, Back-end development </div>
+                           <div className = 'techToolsList' style = {{fontSize: '3vw'}}>Node.js, Express.js, Knex, SQLite, Django, Python</div>
                         </div>
                         <div className = 'jobs' style = {{paddingBottom: '0.5rem'}}>
                            <div className = 'techTools' style = {{fontSize: '5vw'}}>Tools</div>
