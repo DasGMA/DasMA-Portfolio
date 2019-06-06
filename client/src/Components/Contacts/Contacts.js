@@ -5,7 +5,7 @@ import Email from './Email';
 import Twitter from './Twitter';
 
 class Contacts extends Component {
-    constructor(){
+    constructor() {
         super();
         this.state = {
             show: [true, true, true]
@@ -22,7 +22,7 @@ class Contacts extends Component {
         });
     }
 
-    render(){
+    render() {
         return(
             <Container>
                 <img className = 'bg' style = {{background: '#0B0B0B'}} alt = 'Contacts' />

@@ -5,7 +5,7 @@ import dell from '../../Media/Dell.png';
 function HomePage() {
     return (
         <Container className = 'home-page center-align'>
-        <img src={dell} className = 'bg' alt = 'Home page' />
+        <img src = {dell} className = 'bg' alt = 'Home page' />
             <Row className = 'blue-grey-text text-lighten-5 valign-wrapper'>
                 <Col s={12}>
                     <h1>Hi. I'm Das.</h1>

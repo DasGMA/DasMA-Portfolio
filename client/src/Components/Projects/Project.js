@@ -6,7 +6,7 @@ function Project(props) {
         <Row>
             <Col l={1}></Col>
             <Col l={10} s={12} m={12}>
-                <h4 style = {{color: '#fff'}}>{props.title}</h4>
+                <h4 className = 'center' style = {{color: '#fff'}}>{props.title}</h4>
                 <Card 
                     header = {<CardTitle reveal image = {props.image} waves = 'light' />}
                     title = {props.title}
