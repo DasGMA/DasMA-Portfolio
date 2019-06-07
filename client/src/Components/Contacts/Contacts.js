@@ -25,7 +25,6 @@ class Contacts extends Component {
     render() {
         return(
             <Container>
-                <img className = 'bg' style = {{background: '#0B0B0B'}} alt = 'Contacts' />
                 <Row className = 'center' style = {{color: '#fff'}}><h2>Contact me</h2></Row>
                 <Row>
                     <Col s = {12} m = {4} l = {4} className = 'center' onClick = {() => this.click(0)}>{this.state.show[0] ? <div className = 'contact'><i className="fas fa-phone-square fa-5x"></i></div> : <Phone />}</Col>

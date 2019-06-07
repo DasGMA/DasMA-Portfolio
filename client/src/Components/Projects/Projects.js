@@ -44,7 +44,6 @@ class Projects extends Component {
     render() {
         return (
             <Container>
-            <img className = 'bg' style = {{background: '#0B0B0B'}} alt = 'Projects' />
                 <Row className = 'center' style = {{color: '#fff'}}><h1>Projects</h1></Row>
                 {this.state.projects.map(project => (
                         <Project 

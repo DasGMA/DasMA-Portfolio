@@ -5,7 +5,6 @@ import pdf from '../../Documents/DasMa.pdf';
 function Resume() {
     return (
         <Container className = 'resume'>
-             <img className = 'bg' style = {{background: '#0B0B0B'}} alt = 'Resume' />
             <Carousel options = {{fullWidth: true, indicators: true}}>
 
                {/* About me slide */}
