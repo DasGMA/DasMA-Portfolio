@@ -4,6 +4,7 @@ import dell from '../../Media/Dell.png';
 
 function HomePage() {
     return (
+        <div className = 'home'>
         <Container className = 'home-page center-align'>
         <img src = {dell} className = 'bg' alt = 'Home page' />
             <Row className = 'blue-grey-text text-lighten-5 valign-wrapper'>
@@ -18,6 +19,7 @@ function HomePage() {
                 </Col>
             </Row>
         </Container>
+        </div>
     )
 }
 

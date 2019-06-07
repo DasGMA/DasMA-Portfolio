@@ -13,6 +13,11 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <meta name="theme-color" content="#000000" />
+    <style>
+      body {
+        background-color: #0B0B0B;
+      }
+    </style>
     
       <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
       <!-- Import Google Icon Font -->
@@ -21,7 +26,11 @@
       <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css" rel="stylesheet">
       <!--Font Awesome Icons-->
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-      
+      <script>
+        window.loadPromise = new Promise(function(resolve) {
+          window.addEventListener('load', resolve);
+        });
+      </script>
       <title>Das MA | Software Developer</title>
   </head>
   <body>

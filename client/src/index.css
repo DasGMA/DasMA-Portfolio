@@ -1,7 +1,6 @@
 body {
   margin: 0;
   padding: 0;
-  height: 100%;
   font-family: -apple-system, BlinkMacSystemFont, ""Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue","
     sans-serif;
@@ -22,6 +21,7 @@ p {
 
 /* Blurry image */
 img.bg {
+  background-color: #0B0B0B;
   background: no-repeat center center fixed; 
   background-size: cover;
   display: block;
@@ -408,4 +408,3 @@ blockquote {
 .contact .black{
   background: #000;
 }
-
