@@ -2,8 +2,8 @@ import { TimelineMax as Timeline, Power1 } from 'gsap';
 
 const getDefaultTimeline = (node, delay) => {
   const timeline = new Timeline({ paused: true });
-  const content = node.querySelector('.row');
-  const contentInner = node.querySelector('.col');
+  const content = node.querySelector('.container');
+  const contentInner = node.querySelector('.row');
 
   timeline
     .from(node, 0.3, { display: 'none', autoAlpha: 0, delay, ease: Power1.easeIn })

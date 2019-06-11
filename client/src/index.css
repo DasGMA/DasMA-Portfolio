@@ -310,7 +310,7 @@ button {
   bottom: 0;
   left: 50%;
   padding-left: 3rem;
-  padding-bottom: 3.5rem;
+  padding-bottom: 4rem;
   cursor: pointer;
 }
 
@@ -407,4 +407,65 @@ blockquote {
 
 .contact .black{
   background: #000;
+}
+
+.board {
+  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+  transform: perspective(300px) rotateX(25deg);
+  transform-origin: 50% 100%;
+  text-align: justify;
+  overflow: hidden;
+  font-size: 400%;
+  height: 7.32em;
+  width: 100%;
+}
+
+.board:after {
+  content: ' ';
+  
+}
+
+/* Set the scrolling animation and position it */
+.content {
+  animation: scroll 20s linear;
+  position: relative;
+  top: 100%;
+}
+
+@keyframes scroll {
+    0% {
+        top: 100%;
+    }
+    100% {
+        top: -500%;
+    }
+}
+
+.fadeIn {
+  animation: fadeIn 0.5s ease-in;
+  opacity: 1;
+
+}
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+.fadeOut {
+  animation: fadeOut 0.5s ease-out;
+  opacity: 0;
+}
+
+@keyframes fadeOut {
+  0% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+  }
 }

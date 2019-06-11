@@ -11,8 +11,8 @@ function Resume() {
                <div>
                   {/* Desktop view */}
                   <Row className = 'hide-on-small-and-down'>
-                     <div className = 'col s12 m6 white-text column-dark'>
-                        <img src = {require ('../../Media/DasMA.png')} alt = 'Das MA' style = {{paddingTop: '3rem'}}/>
+                     <div className = 'col s12 m6 white-text column-dark valign-wrapper centered'>
+                        <h1>INTRO</h1>
                      </div>
                      <div className = 'col s12 m6 lighten-4 column-bright about'>
                         <h4>Das MA</h4>
