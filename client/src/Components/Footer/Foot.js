@@ -8,7 +8,7 @@ function Foot() {
                 <Container>
                     <Row style = {{marginBottom: '1rem'}}>
                         <Col s={6}>
-                            ©Copyright DM
+                            <span className = 'copyright'>©Copyright DM</span>
                         </Col>
                         <Col s={6} className = 'icons'>
                             <a href = 'https://www.linkedin.com/in/dasma/'><i className="fab fa-linkedin-in fa-lg social-icons"></i></a>

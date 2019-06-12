@@ -16,7 +16,7 @@ main {
 }
 
 p {
-  font-size: 1.2
+  font-size: 1.2rem
 }
 
 /* Blurry image */
@@ -75,7 +75,10 @@ li a.navi.active {
 }
 
 
-/* Footer social icons */
+/* Footer */
+.copyright {
+  font-size: 1rem;
+}
 
 .social-icons{
   cursor: pointer;
@@ -148,102 +151,83 @@ button {
 }
 
 .home-page{
-  padding-top: 7rem;
+  padding-top: 1rem;
 }
 
 .home-page .column {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
-.home-page h1{
-  font-size: 7vw;
-}
-.home-page h2{
-  font-size: 3vw;
-}
+
 
 /* Home page media queries */
 @media (min-width: 992px) {
-  .home-page{
-    padding-top: 15rem;
-  }
-  .home-page h1{
+  
+  /* .home-page h1{
     font-size: 7vw;
   }
   .home-page h2{
     font-size: 3vw;
-  }
+  } */
 }
 
 @media (min-width: 600px) {
-  .home-page{
-    padding-top: 15rem;
-  }
-  .home-page h1{
+  
+  /* .home-page h1{
     font-size: 9vw;
   }
   .home-page h2{
     font-size: 4vw;
-  }
+  } */
 }
 
 @media (min-width: 993px) {
-  .home-page{
-    padding-top: 15rem;
-  }
-  .home-page h1{
+  
+  /* .home-page h1{
     font-size: 7vw;
   }
   .home-page h2{
     font-size: 3vw;
-  }
+  } */
 }
 
 @media (min-width: 320px) {
-  .home-page{
-    padding-top: 7rem;
-  }
-  .home-page h1{
+ 
+  /* .home-page h1{
     font-size: 16vw;
   }
   .home-page h2{
     font-size: 5vw;
-  }
+  } */
 }
 
 @media (min-width: 375px) {
-  .home-page{
-    padding-top: 7rem;
-  }
-  .home-page h1{
+  
+  /* .home-page h1{
     font-size: 13vw;
   }
   .home-page h2{
     font-size: 4vw;
-  }
+  } */
 }
 
 @media (min-width: 1200px) {
-  .home-page{
-    padding-top: 7rem;
-  }
-  .home-page h1{
+  
+  /* .home-page h1{
     font-size: 7vw;
   }
   .home-page h2{
     font-size: 5vw;
-  }
+  } */
 }
 
 @media (min-width: 1024px) {
-  .home-page{
-    padding-top: 7rem;
-  }
-  .home-page h1{
+ 
+  /* .home-page h1{
     font-size: 13vw;
   }
   .home-page h2{
     font-size: 4vw;
-  }
+  } */
 }
 
 
@@ -398,7 +382,7 @@ blockquote {
 /* Contact me */
 .contact {
   background: #fff;
-  height: 200px;
+  height: 150px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -407,38 +391,6 @@ blockquote {
 
 .contact .black{
   background: #000;
-}
-
-.board {
-  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
-  transform: perspective(300px) rotateX(25deg);
-  transform-origin: 50% 100%;
-  text-align: justify;
-  overflow: hidden;
-  font-size: 400%;
-  height: 7.32em;
-  width: 100%;
-}
-
-.board:after {
-  content: ' ';
-  
-}
-
-/* Set the scrolling animation and position it */
-.content {
-  animation: scroll 20s linear;
-  position: relative;
-  top: 100%;
-}
-
-@keyframes scroll {
-    0% {
-        top: 100%;
-    }
-    100% {
-        top: -500%;
-    }
 }
 
 .fadeIn {

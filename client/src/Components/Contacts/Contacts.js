@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
-import { Container, Row, Col } from 'react-materialize';
+import { Row, Col } from 'react-materialize';
 import Phone from './Phone';
 import Email from './Email';
-import Twitter from './Twitter';
 
 class Contacts extends Component {
     constructor() {
         super();
         this.state = {
-            show: [true, true, true]
+            show: [true, true]
         }
     }
 
@@ -24,20 +23,25 @@ class Contacts extends Component {
 
     render() {
         return(
-            <Container>
-                <Row className = 'center' style = {{color: '#fff'}}><h2>Contact me</h2></Row>
-                <Row>
-                    <Col s = {12} m = {4} l = {4} className = 'center' onClick = {() => this.click(0)}>
-                        {this.state.show[0] ? <div className = 'contact'><i className = {this.state.show[0] ? 'fas fa-phone-square fa-5x fadeIn' : 'fas fa-phone-square fa-5x'}></i></div> : <Phone />}
+            <>
+                <Row style = {{color: '#fff'}}>
+                    <Col m = {1}></Col>
+                    <Col s = {12} m = {10}>
+                        <h5>Contact me</h5>
                     </Col>
-                    <Col s = {12} m = {4} l = {4} className = 'center' onClick = {() => this.click(1)}>
-                        {this.state.show[1] ? <div className = 'contact black'><i className = {this.state.show[1] ? 'fas fa-envelope fa-5x fadeIn' : 'fas fa-envelope fa-5x'} style = {{ color: 'white' }}></i></div> : <Email/>}
-                    </Col>
-                    <Col s = {12} m = {4} l = {4} className = 'center' onClick = {() => this.click(2)}>
-                        {this.state.show[2] ? <div className = 'contact'><i className = {this.state.show[2] ? 'fab fa-twitter-square fa-5x fadeIn' : 'fab fa-twitter-square fa-5x'}></i></div> : <Twitter/>}
-                    </Col>
+                    <Col m = {1}></Col>
                 </Row>
-            </Container>
+                <Row>
+                    <Col m = {1}></Col>
+                    <Col s = {12} m = {5} className = 'center' onClick = {() => this.click(0)}>
+                        {this.state.show[0] ? <div className = 'contact'><i className = {this.state.show[0] ? 'fas fa-phone-square fa-3x fadeIn' : 'fas fa-phone-square fa-3x'}></i></div> : <Phone />}
+                    </Col>
+                    <Col s = {12} m = {5} className = 'center' onClick = {() => this.click(1)}>
+                        {this.state.show[1] ? <div className = 'contact black'><i className = {this.state.show[1] ? 'fas fa-envelope fa-3x fadeIn' : 'fas fa-envelope fa-3x'} style = {{ color: 'white' }}></i></div> : <Email/>}
+                    </Col>
+                    <Col m = {1}></Col>
+                </Row>
+            </>
         )
     }
 }

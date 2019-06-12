@@ -3,23 +3,23 @@ import { TimelineMax as Timeline, Power1 } from 'gsap';
 const getDefaultTimeline = (node, delay) => {
   const timeline = new Timeline({ paused: true });
   const content = node.querySelector('.container');
-  const contentInner = node.querySelector('.row');
+  const contentInner1 = node.querySelectorAll('.carousel, .row, .col');
 
   timeline
     .from(node, 0.3, { display: 'none', autoAlpha: 0, delay, ease: Power1.easeIn })
     .from(content, 0.15, { autoAlpha: 0, y: 25, ease: Power1.easeInOut })
-    .from(contentInner, 0.15, { autoAlpha: 0, delay: 0.15, ease: Power1.easeIn });
+    .from(contentInner1, 0.15, { autoAlpha: 0, delay: 0.15, ease: Power1.easeIn });
 
   return timeline;
 }
 
 const getHomeTimeline = (node, delay) => {
   const timeline = new Timeline({ paused: true });
-  const texts = node.querySelectorAll('h1, h2, button');
+  const content = node.querySelectorAll('h1, h4, h5, p, .contact');
 
   timeline
     .from(node, 0, { display: 'none', autoAlpha: 0, delay })
-    .staggerFrom(texts, 0.375, { autoAlpha: 0, x: -25, ease: Power1.easeOut }, 0.125);
+    .staggerFrom(content, 0.375, { autoAlpha: 0, x: -25, ease: Power1.easeOut }, 0.125);
 
   return timeline;
 }

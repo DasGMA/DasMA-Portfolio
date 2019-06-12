@@ -1,58 +1,27 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-materialize';
 import dell from '../../Media/Dell.png';
+import About from '../About/About';
+import Contacts from '../Contacts/Contacts';
 
-const Text = <Col s = {12} className = 'board'><div className = 'content'><p>Long long time ago..........sdfasfgasfgfagdfgdfg. Long long time ago..........sdfasfgasfgfagdfgdfg. Long long time ago..........sdfasfgasfgfagdfgdfg</p><p>Long long time ago..........sdfasfgasfgfagdfgdfg</p><p>Long long time ago..........sdfasfgasfgfagdfgdfg</p><p>Long long time ago..........sdfasfgasfgfagdfgdfg</p><p>Long long time ago..........sdfasfgasfgfagdfgdfg</p><p>Long long time ago..........sdfasfgasfgfagdfgdfg</p><p>Long long time ago..........sdfasfgasfgfagdfgdfg</p><p>Long long time ago..........sdfasfgasfgfagdfgdfgEND</p></div></Col>
-let timeout;
-class HomePage extends Component {
-    constructor() {
-        super();
-        this.state = {
-            show: true,
-            play: true,
-        }
-    }
-    
-    componentWillUnmount() {
-        window.clearTimeout(timeout);
-    }
-
-    click = () => {
-        timeout = setTimeout(this.stop, 20000);
-        this.setState(prevState => ({
-            show: !prevState.show,
-            play: !prevState.play
-        }));
-    }
-
-    stop = () => {
-        this.setState({
-            show: true,
-            play: true
-        });
-
-        window.location = '/about';
-    }
- 
+class HomePage extends Component { 
     render() {
-        const { show, play } = this.state;
         return (
-            <Container className = 'home-page center-align'>
+            <Container className = 'home-page'>
             <img src = {dell} className = 'bg' alt = 'Home page' />
                
-               <Row className = 'blue-grey-text text-lighten-5 valign-wrapper'>
-                 { play ? <Col s = {12} >
-                            <h1>Hi. I'm Das.</h1>
-                            <h2>Software developer from California.</h2>
-                          </Col>
-                        : Text }
+               <Row className = 'blue-grey-text text-lighten-5'>
+                   <Col m = {1}></Col>
+                    <Col m = {10} s = {12} >
+                        <h1>Hi. I'm Das.</h1>
+                        <h4>Software developer from California.</h4>
+                    </Col>
+                    <Col m = {1}></Col>
                 </Row>
                 
-                <Row className = 'blue-grey-text text-lighten-5'>
-                    <Col s = {12} className = 'column'>
-                    <button onClick = {this.click}>{show ? <i className = 'far fa-play-circle fa-5x meetme-icon'></i> : null}</button>
-                    </Col>
-                </Row>
+                <About />
+                <Contacts />
+                 
             </Container>
         )
     }
