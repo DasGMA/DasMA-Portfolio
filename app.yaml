@@ -13,5 +13,5 @@
 
 # [START app_yaml]
 env: standard
-runtime: nodejs
+runtime: nodejs10
 # [END app_yaml]
