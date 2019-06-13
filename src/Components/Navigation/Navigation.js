@@ -1,16 +1,21 @@
 import React from 'react';
-import { Navbar, Container } from 'react-materialize';
+import { Container } from 'react-materialize';
 import { NavLink } from 'react-router-dom';
 
 function Navigation() {
+    
     return (
         <header>
             <Container style = {{borderBottom: '1px solid grey'}}>
-                <Navbar right brand = 'DM' className = 'transparent z-depth-0'>
-                    <li><NavLink className = 'navi' to = '/resume'>Resume</NavLink></li>
-                    <li><NavLink className = 'navi' to = '/projects'>Projects</NavLink></li>
-                    {/* <li><NavLink className = 'navi' to = '/blog'>Blog</NavLink></li> */}
-                </Navbar>
+                <nav className = 'transparent z-depth-0'>
+                    <div className="nav-wrapper">
+                    <a href="/" className="brand-logo left">DM</a>
+                    <ul className="right">
+                        <li><NavLink className = 'navi' to = '/resume'>Resume</NavLink></li>
+                        <li><NavLink className = 'navi' to = '/projects'>Projects</NavLink></li>
+                    </ul>
+                    </div>
+                </nav>
             </Container>
         </header>
     )

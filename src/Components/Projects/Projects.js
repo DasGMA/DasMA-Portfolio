@@ -6,7 +6,6 @@ import mud from '../../Media/mud.jpg';
 import ontherecord from '../../Media/ontherecord.png';
 import spaceShooter from '../../Media/spaceShooter.jpg';
 import {
-    mySiteDescription,
     spaceShooterDescription,
     ontherecordDescription,
     golDescription,
@@ -16,12 +15,12 @@ import {
 class Projects extends Component {
     state = {
         projects: [
-            {
-                'title': 'My Personal Site',
-                'link': '',
-                'description': mySiteDescription,
-                'image': ''
-            },
+            // {
+            //     'title': 'My Personal Site',
+            //     'link': '',
+            //     'description': mySiteDescription,
+            //     'image': ''
+            // },
             {
                 'title': 'Space Game',
                 'link': 'https://guardians-of-the-galaxy-crazy-ugly-space-game.netlify.com/',
