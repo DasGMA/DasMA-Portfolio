@@ -176,7 +176,6 @@ button {
 
 .resume {
   padding-top: 1rem;
-  min-height: calc(100vh - 128px - 1.5rem);
 }
 
 .resume h4 {
@@ -187,7 +186,6 @@ button {
 .resume h1 {
   font-weight: bold;
 }
-
 
 .carousel.carousel-slider {
   min-height: calc(100vh - 128px - 1.5rem);

@@ -23,7 +23,7 @@ function Resume() {
                      </div>
                   </Row>
                   {/* Mobile and tablet view */}
-                  <Row className = 'show-on-small'>
+                  <Row className = 'hide-on-med-and-up'>
                      <div className = 'col s12 white-text' style = {{background: 'black', padding: '0'}}>
                         <h1 style = {{fontSize: '2rem', margin: '0', padding: '0.5rem 3rem'}}>Das MA</h1>
                      </div>
@@ -73,7 +73,7 @@ function Resume() {
                   </Row>
 
                   {/* Mobile and tablet view */}
-                  <Row className = 'show-on-small'>
+                  <Row className = 'hide-on-med-and-up'>
                      <div className = 'col s12' style = {{background: 'white', padding: '0'}}>
                         <h1 style = {{fontSize: '2rem', margin: '0', padding: '0.5rem 3rem'}}>EXPERIENCE</h1>
                         
@@ -128,7 +128,7 @@ function Resume() {
                      </div>
                   </Row>
                   {/* Mobile and tablet view */}
-                  <Row className = 'show-on-small'>
+                  <Row className = 'hide-on-med-and-up'>
                      <div className = 'col s12 white-text' style = {{background: '#141414', padding: '0'}}>
                         <h1 style = {{fontSize: '2rem', margin: '0', padding: '0.5rem 3rem'}}>EDUCATION</h1>
                      </div>
@@ -175,7 +175,7 @@ function Resume() {
                   </Row>
 
                   {/* Mobile and tablet view */}
-                  <Row className = 'show-on-small'>
+                  <Row className = 'hide-on-med-and-up'>
                      <div className = 'col s12' style = {{background: 'white', padding: '0'}}>
                         <h1 style = {{fontSize: '2rem', margin: '0', padding: '0.5rem 3rem'}}>SKILLS</h1>
                      </div>
