@@ -59,7 +59,7 @@ img.bg {
 
 /* Navigation */
 
-a.navi{
+a.navi {
   border-bottom: none;
 }
 
@@ -101,7 +101,7 @@ li a.navi.active {
 
 /* Home Page blinking icon*/
 
-.meetme-icon{
+.meetme-icon {
   -webkit-animation-name: blinkingIcon;
   -webkit-animation-duration: 3s;
   -webkit-animation-timing-function: linear;
@@ -159,81 +159,9 @@ button {
 }
 
 
-/* Home page media queries */
-@media (min-width: 992px) {
-  
-  /* .home-page h1{
-    font-size: 7vw;
-  }
-  .home-page h2{
-    font-size: 3vw;
-  } */
-}
-
-@media (min-width: 600px) {
-  
-  /* .home-page h1{
-    font-size: 9vw;
-  }
-  .home-page h2{
-    font-size: 4vw;
-  } */
-}
-
-@media (min-width: 993px) {
-  
-  /* .home-page h1{
-    font-size: 7vw;
-  }
-  .home-page h2{
-    font-size: 3vw;
-  } */
-}
-
-@media (min-width: 320px) {
- 
-  /* .home-page h1{
-    font-size: 16vw;
-  }
-  .home-page h2{
-    font-size: 5vw;
-  } */
-}
-
-@media (min-width: 375px) {
-  
-  /* .home-page h1{
-    font-size: 13vw;
-  }
-  .home-page h2{
-    font-size: 4vw;
-  } */
-}
-
-@media (min-width: 1200px) {
-  
-  /* .home-page h1{
-    font-size: 7vw;
-  }
-  .home-page h2{
-    font-size: 5vw;
-  } */
-}
-
-@media (min-width: 1024px) {
- 
-  /* .home-page h1{
-    font-size: 13vw;
-  }
-  .home-page h2{
-    font-size: 4vw;
-  } */
-}
-
-
 /* Resume page styling */
 
-.container .row{
+.container .row {
   margin-left: 0;
   margin-right: 0;
 }
@@ -246,17 +174,17 @@ button {
     background-color: #00e2e2;
   }
 
-.resume{
+.resume {
   padding-top: 1rem;
   min-height: calc(100vh - 128px - 1.5rem);
 }
 
-.resume h4{
+.resume h4 {
   padding: 0;
   margin: 0;
 }
 
-.resume h1{
+.resume h1 {
   font-weight: bold;
 }
 
@@ -265,7 +193,7 @@ button {
   min-height: calc(100vh - 128px - 1.5rem);
 }
 
-.resume .column-bright{
+.resume .column-bright {
   background: white;
   min-height: calc(100vh - 128px - 1.5rem);
   padding: 0 3rem;
@@ -277,24 +205,22 @@ button {
   padding: 0 3rem;
 }
 
-.resume .column-bright.about{
+.resume .column-bright.about {
   padding: 3rem;
 }
-.resume .column-bright.about h4{
+.resume .column-bright.about h4 {
   font-size: 6vw;
   font-weight: 900;
 }
-.resume .column-bright.about p{
+.resume .column-bright.about p {
   font-size: 1.6rem;
   padding-top: 4rem;
 }
 
-.resume .column-bright.about a{
+.resume .column-bright.about a {
   position: absolute;
-  bottom: 0;
-  left: 50%;
-  padding-left: 3rem;
-  padding-bottom: 4rem;
+  left: 3rem;
+  bottom: 7rem;
   cursor: pointer;
 }
 
@@ -304,17 +230,17 @@ blockquote {
   border-left: 3px solid #008080;
 }
 
-.aligned{
+.aligned {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.centered{
+.centered {
   justify-content: center;
 }
 
-.date{
+.date {
   color: #008080;
   font-weight: 900;
   font-size: 1.4rem;
@@ -322,14 +248,14 @@ blockquote {
   
 }
 
-.position{
+.position {
   color: #c3b323;
   font-size: 1rem;
   font-weight: 500;
   letter-spacing: 0.2rem;
 }
 
-.company{
+.company {
   color: white;
   font-size: 1.4rem;
   font-weight: 900;
@@ -337,7 +263,7 @@ blockquote {
   margin-top: 0.5rem;
 }
 
-.responsibility{
+.responsibility {
   color: grey;
 }
 
@@ -345,24 +271,24 @@ blockquote {
   padding-bottom: 1.5rem;
 }
 
-.jobs:last-child{
+.jobs:last-child {
   padding-bottom:0;
 }
 
-.techTools{
+.techTools {
   color: #c3b323;
   font-size: 1.4rem;
   font-weight: 900;
   letter-spacing: 0.2rem;
 }
 
-.techToolsList{
+.techToolsList {
   padding-top: 0.5rem;
   color: #fff;
   letter-spacing: 0.1rem;
 }
 
-.school{
+.school {
   color: #000;
   font-size: 1.4rem;
   font-weight: 900;
@@ -389,7 +315,7 @@ blockquote {
   cursor: pointer;
 }
 
-.contact .black{
+.contact .black {
   background: #000;
 }
 
