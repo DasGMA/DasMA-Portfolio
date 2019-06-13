@@ -60,7 +60,6 @@ class Projects extends Component {
                             title = {project.title}
                             description = {project.description}
                             image = {project.image}
-                            link = {project.link}
                         />
                 ))}
             </Container>

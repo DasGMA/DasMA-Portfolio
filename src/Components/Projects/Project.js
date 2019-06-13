@@ -4,13 +4,10 @@ import { Card, CardTitle, Col } from 'react-materialize';
 function Project(props) {
     return(
         <>
-        <Col style = {{paddingTop: '1rem'}}>
+        <Col  m={6} s={12} style = {{paddingTop: '1rem'}}>
             <h5 style = {{color: '#fff'}}>{props.title}</h5>
-            <Card 
-                header = {<CardTitle reveal image = {props.image} waves = 'light' />}
-                title = {props.title}
-                reveal = {props.description}>
-                <p>Link to app: <a href = {props.link} target = '_blank' rel = 'noopener noreferrer'>{props.title}</a></p>
+            <Card header = {<CardTitle image = {props.image}/>}>
+                <p>{props.description}</p>
             </Card>
         </Col>
         <div className = 'divider'></div>
