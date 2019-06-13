@@ -56,7 +56,6 @@ class Projects extends Component {
                     <Col m = {10} s = {12}><h3>Projects</h3></Col>
                     <Col m = {1} s = {12}></Col>
                 </Row>
-                
                 {this.state.projects.map(project => (
                         <Project 
                             key = {project.link + project.title}
