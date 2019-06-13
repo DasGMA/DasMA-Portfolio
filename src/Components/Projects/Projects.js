@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Row } from 'react-materialize';
+import { Container, Row, Col } from 'react-materialize';
 import Project from './Project';
 import gol from '../../Media/gameoflife.png';
 import mud from '../../Media/mud.jpg';
@@ -51,8 +51,12 @@ class Projects extends Component {
     render() {
         return (
             <Container>
-                <Row className = 'center' style = {{color: '#fff'}}><h1>Projects</h1></Row>
-                <div className = 'divider'></div>
+                <Row style = {{color: '#fff'}}>
+                    <Col m = {1} s = {12}></Col>
+                    <Col m = {10} s = {12}><h3>Projects</h3></Col>
+                    <Col m = {1} s = {12}></Col>
+                </Row>
+                
                 {this.state.projects.map(project => (
                         <Project 
                             key = {project.link + project.title}
