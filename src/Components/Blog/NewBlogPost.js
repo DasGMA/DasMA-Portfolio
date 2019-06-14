@@ -20,11 +20,13 @@ class NewBlogPost extends Component {
 
     addPost = event => {
         event.preventDefault();
+
         const newPost = {
           title: this.state.title,
           content: this.state.content,
           category: this.state.category
         }
+
         axios.post(URL, newPost) 
           .then(response => {
             console.log(response);
@@ -34,6 +36,7 @@ class NewBlogPost extends Component {
           .catch(error => {
             console.log(error);
           })
+          
           this.setState({
             title: '',
             content: '',

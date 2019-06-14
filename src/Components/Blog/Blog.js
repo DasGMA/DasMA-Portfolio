@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Link, Route } from 'react-router-dom';
-import { Container, Row, Col, Button } from 'react-materialize';
+import { Route } from 'react-router-dom';
+import { Container, Row, Col } from 'react-materialize';
 import Search from './Search';
 import BlogPost from './BlogPost';
 import BlogPostView from './BlogPostView';
@@ -65,9 +65,7 @@ class Blog extends Component {
 
         return (
             <Container>
-            <img className = 'bg' style = {{background: '#0B0B0B'}} alt = 'Blog' />
                 <Search handleSearch = {this.handleSearch} search = {search}/>
-                <Row><Col><Button><Link to = '/admin_login'>Admin Login</Link> </Button></Col></Row>
                 { layout }
             </Container>
         )

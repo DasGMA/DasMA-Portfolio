@@ -9,7 +9,7 @@ const Search = (props) => {
                     value = {props.search}
                     onChange = {props.handleSearch}
                 />
-                <label for = 'search'>Search blog posts</label>
+                <label htmlFor = 'search'>Search blog posts</label>
             </div>
     )
 }
