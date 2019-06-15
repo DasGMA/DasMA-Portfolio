@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-/* import DeleteModal from './DeleteModal';
-import { MarkdownPreview } from 'react-marked-markdown'; */
+/*import { MarkdownPreview } from 'react-marked-markdown'; */
 
 const URL = 'http://ma:9000/posts/';
 
@@ -59,6 +58,7 @@ class BlogPostView extends Component {
                         <div className = "button" onClick={() => this.delete(this.state.id)} title={this.state.title}>Delete</div>
                     </div>
                     <h1>{this.state.title}</h1>
+                    <p>{this.state.content}</p>
                 {/*  <MarkdownPreview className='mark' value={this.state.content} /> */}
                     <div className = 'button'><Link to={`/blog`}>Back</Link></div>
                 </div>

@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Form, FormGroup, Label, Col, Input, Button, Container } from 'react-materialize';
 
 
-const URL = 'https://dasma-blog.herokuapp.com/posts/';
+const URL = 'http://ma:9000/posts/';
 
 
 class EditBlogPost extends Component {

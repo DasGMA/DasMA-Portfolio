@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 
-
 const URL = 'http://ma:9000/posts/add/';
 
 class NewBlogPost extends Component {
@@ -10,8 +9,7 @@ class NewBlogPost extends Component {
         this.state = { 
             title: '',
             content: '',
-            category: '',
-            userId: ''
+            category: ''
          }
     }
 
@@ -25,8 +23,7 @@ class NewBlogPost extends Component {
         const newPost = {
           title: this.state.title,
           content: this.state.content,
-          category: this.state.category,
-          userId: this.state.userId
+          category: this.state.category
         }
 
         axios.post(URL, newPost) 
@@ -42,8 +39,7 @@ class NewBlogPost extends Component {
           this.setState({
             title: '',
             content: '',
-            category: '',
-            userId: ''
+            category: ''
           });
     }
     render() { 

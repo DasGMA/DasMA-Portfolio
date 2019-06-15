@@ -18,7 +18,16 @@ class Admin extends Component {
         });
     }
 
-    adminLogin = () => {
+    setToken = (token) => {
+        localStorage.setItem('token', token)
+    }
+
+    getToken = () => {
+        return localStorage.getItem('token');
+    }
+
+    adminLogin = (event) => {
+        event.preventDefault();
         const admin = {
             username: this.state.username,
             password: this.state.password
@@ -26,9 +35,10 @@ class Admin extends Component {
 
         Axios.post(url, admin)
         .then(response => {
-            console.log(response);
-            console.log(response.data);
-            window.location = '/blog';
+            this.setToken(response.data);
+            if (this.getToken) {
+                window.location = '/blog';
+            }     
         })
         .catch(error => {
             console.log(error)
