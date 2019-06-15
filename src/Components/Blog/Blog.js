@@ -5,8 +5,10 @@ import { Container, Row, Col } from 'react-materialize';
 import Search from './Search';
 import BlogPost from './BlogPost';
 import BlogPostView from './BlogPostView';
+import NewBlogPost from './NewBlogPost';
+import Admin from './Admin';
 
-const URL = 'https://dasma-blog.herokuapp.com/posts';
+const URL = 'http://ma:9000/posts';
 
 class Blog extends Component {
     constructor(props){
@@ -14,7 +16,9 @@ class Blog extends Component {
         this.state = {
             posts: [],
             search: '',
-            searchPosts: []
+            searchPosts: [],
+            show: false,
+            adminLogin: false
         }
     }
 
@@ -40,9 +44,21 @@ class Blog extends Component {
         });
     }
 
+    newPost = () => {
+        this.setState(prevState => ({
+            show: !prevState.show
+        }));
+    }
+    admin = () => {
+        this.setState(prevState => ({
+            adminLogin: !prevState.adminLogin
+        }));
+    }
+
     render() {
         const { posts, search } = this.state;
         const layout =  <Row>
+                            <Search handleSearch = {this.handleSearch} search = {search}/>
                             <Col s={12} m={3} style = {{color: '#fff', border: '1px solid yellow'}}>
                              Categories
                             </Col>
@@ -65,8 +81,11 @@ class Blog extends Component {
 
         return (
             <Container>
-                <Search handleSearch = {this.handleSearch} search = {search}/>
-                { layout }
+                <button onClick = {this.newPost}>New Post</button>
+                <button onClick = {this.admin}>Admin Login</button>
+                
+                {this.state.show ? <NewBlogPost /> : layout}
+                {this.state.adminLogin ? <Admin /> : null}
             </Container>
         )
     }

@@ -8,7 +8,6 @@ import Blog from './Components/Blog/Blog';
 import Foot from './Components/Footer/Foot';
 import { TransitionGroup, Transition } from 'react-transition-group';
 import { play, exit } from './Components/timelines';
-import NewBlogPost from './Components/Blog/NewBlogPost';
 class App extends Component {
   render() {
     return (
@@ -32,7 +31,6 @@ class App extends Component {
                       <Route path = '/resume' component = { Resume } />
                       <Route path = '/projects' component = { Projects } />
                       <Route path = '/blog' component = { Blog } />
-                      <Route path = '/blog/new-post'  component = { NewBlogPost } />
                     </Switch>
                   </main>
                 </Transition>

@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import axios from 'axios';
 
 
-const URL = 'https://dasma-blog.herokuapp.com/posts/add/';
+const URL = 'http://ma:9000/posts/add/';
 
 class NewBlogPost extends Component {
     constructor(props) {
@@ -10,7 +10,8 @@ class NewBlogPost extends Component {
         this.state = { 
             title: '',
             content: '',
-            category: ''
+            category: '',
+            userId: ''
          }
     }
 
@@ -24,7 +25,8 @@ class NewBlogPost extends Component {
         const newPost = {
           title: this.state.title,
           content: this.state.content,
-          category: this.state.category
+          category: this.state.category,
+          userId: this.state.userId
         }
 
         axios.post(URL, newPost) 
@@ -40,7 +42,8 @@ class NewBlogPost extends Component {
           this.setState({
             title: '',
             content: '',
-            category: ''
+            category: '',
+            userId: ''
           });
     }
     render() { 

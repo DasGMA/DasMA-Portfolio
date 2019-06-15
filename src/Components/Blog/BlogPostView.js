@@ -4,7 +4,7 @@ import axios from 'axios';
 /* import DeleteModal from './DeleteModal';
 import { MarkdownPreview } from 'react-marked-markdown'; */
 
-const URL = 'https://dasma-blog.herokuapp.com/posts/';
+const URL = 'http://ma:9000/posts/';
 
 class BlogPostView extends Component {
     constructor(props) {
@@ -55,7 +55,7 @@ class BlogPostView extends Component {
         return ( 
                 <div>
                     <div>
-                        <div className = 'button'><Link to={`/edit-post/${this.state.id}`}> Edit </Link></div>
+                        <div className = 'button'><Link to={`edit-post/${this.state.id}`}> Edit </Link></div>
                         <div className = "button" onClick={() => this.delete(this.state.id)} title={this.state.title}>Delete</div>
                     </div>
                     <h1>{this.state.title}</h1>
