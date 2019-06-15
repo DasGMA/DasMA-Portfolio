@@ -36,9 +36,9 @@ class Admin extends Component {
         Axios.post(url, admin)
         .then(response => {
             this.setToken(response.data);
-            if (this.getToken) {
-                window.location = '/blog';
-            }     
+            // if (this.getToken) {
+            //     window.location = '/blog';
+            // }     
         })
         .catch(error => {
             console.log(error)

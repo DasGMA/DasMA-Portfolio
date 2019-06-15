@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
+import decode from 'jwt-decode';
 
 const URL = 'http://ma:9000/posts/add/';
 
@@ -9,8 +10,24 @@ class NewBlogPost extends Component {
         this.state = { 
             title: '',
             content: '',
-            category: ''
+            category: '',
+            userId: ''
          }
+    }
+
+    componentDidMount() {
+        this.setId();
+    }
+
+    setId = () => {
+        let data = decode(this.getToken());
+        this.setState({
+            userId: data.id
+        });
+    }
+
+    getToken = () => {
+        return localStorage.getItem('token');
     }
 
     change = (event) => {
@@ -23,13 +40,12 @@ class NewBlogPost extends Component {
         const newPost = {
           title: this.state.title,
           content: this.state.content,
-          category: this.state.category
+          category: this.state.category,
+          userId: this.state.userId
         }
 
         axios.post(URL, newPost) 
           .then(response => {
-            console.log(response);
-            console.log(response.data);
             window.location = '/blog';
           })
           .catch(error => {
@@ -39,7 +55,8 @@ class NewBlogPost extends Component {
           this.setState({
             title: '',
             content: '',
-            category: ''
+            category: '',
+            userId: ''
           });
     }
     render() { 
@@ -50,10 +67,10 @@ class NewBlogPost extends Component {
                 <div>
                 <h1>Add New Blog Post</h1>
                     <div>
-                            <div>Category</div>
-                                <div>
-                                    <input type="text" name="category" placeholder="Post category" value={category} onChange={(event) => this.change(event)} />
-                                </div>
+                        <div>Category</div>
+                            <div>
+                                <input type="text" name="category" placeholder="Post category" value={category} onChange={(event) => this.change(event)} />
+                            </div>
                     </div>
                     <div >
                         <div>Title</div>

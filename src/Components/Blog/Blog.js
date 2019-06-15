@@ -32,7 +32,6 @@ class Blog extends Component {
     getPosts = () => {
         axios.get(URL)
         .then(response => {
-            console.log(response.data)
             this.setState({
                 posts: response.data,
                 searchPosts: response.data
@@ -86,7 +85,7 @@ class Blog extends Component {
     isTokenExpired = (token) => {
         try {
             const decoded = decode(token);
-            if (decoded.exp < Date.now() / 1000) {
+            if (decoded.exp < Date.now() / 10000) {
                 return true;
             } else {
                 return false;
@@ -99,7 +98,6 @@ class Blog extends Component {
     
 
     render() {
-        console.log(this.state.adminLoggedIn)
         const { posts, search } = this.state;
         const layout =  <Row>
                             <Search handleSearch = {this.handleSearch} search = {search}/>
