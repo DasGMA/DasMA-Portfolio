@@ -24,7 +24,7 @@ class Blog extends Component {
         }
     }
 
-    componentDidMount () {
+    componentDidMount() {
         this.getPosts();
         this.loggedIn();
     }
@@ -106,18 +106,16 @@ class Blog extends Component {
                             </Col>
 
                             <Col s={12} m={9} style = {{color: '#fff', border: '1px solid yellow'}}>
-                                {posts.map(post => {
-                                    return (
-                                        <BlogPost
-                                            key = {post.id}
-                                            id = {post.id}
-                                            title = {post.title}
-                                            content = {post.content}
-                                            category = {post.category}
-                                        />
-                                    )
-                                })}
-                            <Route path = {`${this.props.match.path}/:id`} component = { BlogPostView } />
+                                {posts.map(post => (
+                                    <BlogPost
+                                        key = {post.id}
+                                        id = {post.id}
+                                        title = {post.title}
+                                        content = {post.content}
+                                        category = {post.category}
+                                    /> 
+                                ))}
+                            <Route path = {`${this.props.match.path}/post/:id`} component = { BlogPostView } />
                             </Col>
                         </Row>
 

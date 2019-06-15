@@ -13,7 +13,7 @@ class BlogPostView extends Component {
             title: '',
             content: '',
             category: '',
-            postedBy: ''        
+            postedBy: ''     
          }
     }
 
@@ -33,7 +33,9 @@ class BlogPostView extends Component {
             })
             .catch(err => {
                 console.log(err);
-            })
+            });
+
+
     }
 
     delete = (id) => {
@@ -50,15 +52,16 @@ class BlogPostView extends Component {
       }
 
     render() {
-        
+        console.log(this.state.loggedIn)
         return ( 
                 <div>
-                    <div>
+                    {localStorage.getItem('token') ? <div>
                         <div className = 'button'><Link to={`edit-post/${this.state.id}`}> Edit </Link></div>
                         <div className = "button" onClick={() => this.delete(this.state.id)} title={this.state.title}>Delete</div>
-                    </div>
+                    </div> : null}
                     <h1>{this.state.title}</h1>
                     <p>{this.state.content}</p>
+                    <p>{this.state.postedBy}</p>
                 {/*  <MarkdownPreview className='mark' value={this.state.content} /> */}
                     <div className = 'button'><Link to={`/blog`}>Back</Link></div>
                 </div>

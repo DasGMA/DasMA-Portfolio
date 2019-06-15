@@ -5,7 +5,7 @@ const BlogPost = (props) => {
         return (
                 <div>
                     <div>{props.category}</div>
-                    <Link  to={`/blog/${props.id}`}><div>{props.title}</div></Link>
+                    <Link  to = {`/blog/post/${props.id}`}><div>{props.title}</div></Link>
                     <div>{props.content}</div>
                 </div>
          );
