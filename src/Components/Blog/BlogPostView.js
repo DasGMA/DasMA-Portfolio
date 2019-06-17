@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
+import { Row } from 'react-materialize';
 import axios from 'axios';
 /*import { MarkdownPreview } from 'react-marked-markdown'; */
 
@@ -12,8 +13,7 @@ class BlogPostView extends Component {
             id: '',
             title: '',
             content: '',
-            category: '',
-            postedBy: ''     
+            category: '',    
          }
     }
 
@@ -28,7 +28,6 @@ class BlogPostView extends Component {
                     content: matching.content,
                     id: matching.id,
                     category: matching.category,
-                    postedBy: matching.postedBy
                 })
             })
             .catch(err => {
@@ -38,35 +37,20 @@ class BlogPostView extends Component {
 
     }
 
-    delete = (id) => {
-        axios.delete(`${URL}${id}/delete`)
-        .then(response => {
-            this.setState({
-                posts: response.data
-            })
-            window.location = '/blog';
-        })
-        .catch(error => {
-          console.log(error);
-        })
-      }
-
     render() {
-        console.log(this.state.loggedIn)
         return ( 
-                <div>
+                <Row>
                     {localStorage.getItem('token') ? <div>
                         <div className = 'button'><Link to={`edit-post/${this.state.id}`}> Edit </Link></div>
-                        <div className = "button" onClick={() => this.delete(this.state.id)} title={this.state.title}>Delete</div>
+                        <div className = "button" onClick={() => this.props.delete(this.state.id)} title={this.state.title}>Delete</div>
                     </div> : null}
                     <h1>{this.state.title}</h1>
                     <p>{this.state.content}</p>
-                    <p>{this.state.postedBy}</p>
                 {/*  <MarkdownPreview className='mark' value={this.state.content} /> */}
-                    <div className = 'button'><Link to={`/blog`}>Back</Link></div>
-                </div>
+                    <button onClick = {this.props.back}>Back</button>
+                </Row>
          );
     }
 }
  
-export default BlogPostView;
+export default withRouter(BlogPostView);

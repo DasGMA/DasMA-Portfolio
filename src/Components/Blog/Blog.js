@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Route } from 'react-router-dom';
-import { Container, Row, Col } from 'react-materialize';
-import Search from './Search';
-import BlogPost from './BlogPost';
+import { Container} from 'react-materialize';
 import BlogPostView from './BlogPostView';
-import NewBlogPost from './NewBlogPost';
-import Admin from './Admin';
 import decode from 'jwt-decode';
+import BlogPostList from './BlogPostList';
+import EditBlogPost from './EditBlogPost';
+import Admin from './Admin';
 
 const URL = 'http://ma:9000/posts';
 
@@ -19,7 +18,6 @@ class Blog extends Component {
             search: '',
             searchPosts: [],
             show: false,
-            adminLogin: false,
             adminLoggedIn: false
         }
     }
@@ -56,10 +54,8 @@ class Blog extends Component {
         }));
     }
 
-    admin = () => {
-        this.setState(prevState => ({
-            adminLogin: !prevState.adminLogin
-        }));
+    adminLogin = () => {
+        this.props.history.push(`${this.props.match.url}/admin-login`);
     }
 
     getToken = () => {
@@ -95,37 +91,45 @@ class Blog extends Component {
             return false;
         }
     }
+
+    delete = (id) => {
+        axios.delete(`${URL}${id}/delete`)
+        .then(response => {
+            this.setState({
+                posts: response.data
+            })
+            window.location = '/blog';
+        })
+        .catch(error => {
+          console.log(error);
+        })
+      }
+
+      back = () => {
+          this.props.history.push('/blog');
+      }
     
 
     render() {
         const { posts, search } = this.state;
-        const layout =  <Row>
-                            <Search handleSearch = {this.handleSearch} search = {search}/>
-                            <Col s={12} m={3} style = {{color: '#fff', border: '1px solid yellow'}}>
-                             Categories
-                            </Col>
-
-                            <Col s={12} m={9} style = {{color: '#fff', border: '1px solid yellow'}}>
-                                {posts.map(post => (
-                                    <BlogPost
-                                        key = {post.id}
-                                        id = {post.id}
-                                        title = {post.title}
-                                        content = {post.content}
-                                        category = {post.category}
-                                    /> 
-                                ))}
-                            <Route path = {`${this.props.match.path}/post/:id`} component = { BlogPostView } />
-                            </Col>
-                        </Row>
-
+        console.log(this.state.adminLogin)
         return (
             <Container>
-                {this.state.adminLoggedIn ? <button onClick = {this.newPost}>New Post</button> : null }
-                { this.state.adminLoggedIn ? <button onClick = {this.logout}>Logout</button> : <button onClick = {this.admin}>Admin Login</button> }
+                { this.state.adminLoggedIn ? <button onClick = {this.newPost}>New Post</button> : null }
+                { this.state.adminLoggedIn ? <button onClick = {this.logout}>Logout</button> : <button onClick = {this.adminLogin}>Admin Login</button> }
+
+                <Route exact path = {`${this.props.match.path}`} render = {(props) => (
+                    <BlogPostList {...props} posts = {posts} handleSearch = {this.handleSearch} search = {search} />
+                )} />
                 
-                {this.state.show ? <NewBlogPost /> : layout}
-                {this.state.adminLogin ? <Admin /> : null}
+                <Route path = {`${this.props.match.path}/post/:id`} render = {(props) => (
+                    <BlogPostView {...props} posts = {posts} delete = {this.delete} back = {this.back}/>
+                )} />
+
+                <Route path = {`${this.props.match.url}/edit-post/:id`} component = { EditBlogPost } />
+
+                <Route path = {`${this.props.match.url}/admin-login`} component = { Admin } />
+
             </Container>
         )
     }

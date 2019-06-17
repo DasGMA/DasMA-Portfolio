@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import decode from 'jwt-decode';
+import { withRouter } from 'react-router-dom';
 
 const URL = 'http://ma:9000/posts/add/';
 
@@ -46,7 +47,7 @@ class NewBlogPost extends Component {
 
         axios.post(URL, newPost) 
           .then(response => {
-            window.location = '/blog';
+            this.props.history.push('/blog');
           })
           .catch(error => {
             console.log(error);
@@ -92,4 +93,4 @@ class NewBlogPost extends Component {
 
 
  
-export default NewBlogPost;
+export default withRouter(NewBlogPost);

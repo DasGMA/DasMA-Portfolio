@@ -50,6 +50,10 @@ class Admin extends Component {
         });
     }
 
+    adminLoginCancel = () => {
+        this.props.history.push('/blog');
+    }
+
     render() {
         return(
             <form>
@@ -73,6 +77,9 @@ class Admin extends Component {
                 </div>
                 <div>
                     <button onClick = {this.adminLogin}>Login</button>
+                </div>
+                <div>
+                    <button onClick = {this.adminLoginCancel}>Cancel</button>
                 </div>
             </form>
         )
