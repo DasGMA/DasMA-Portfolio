@@ -6,7 +6,7 @@ const BlogPost = (props) => {
                 <div>
                     <div>{props.category}</div>
                     <Link  to = {`/blog/post/${props.id}`}><div>{props.title}</div></Link>
-                    <div>{props.content}</div>
+                    <div className= 'truncate'>{props.content}</div>
                 </div>
          );
 }

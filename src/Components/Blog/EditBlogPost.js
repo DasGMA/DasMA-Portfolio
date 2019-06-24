@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-import { Form, FormGroup, Label, Col, Input, Button, Container } from 'react-materialize';
+import { Container } from 'react-materialize';
 
 
 const URL = 'http://ma:9000/posts/';
@@ -21,7 +21,7 @@ componentDidMount () {
     const id = Number(this.props.match.params.id);
         axios.get(URL)
         .then(response => {
-            let matching = response.data.find(post => post.id === id);
+            const matching = response.data.find(post => post.id === id);
             this.setState({
                 title: matching.title,
                 content: matching.content,
@@ -58,31 +58,45 @@ componentDidMount () {
         })
     }
 
+    delete = (id) => {
+        axios.delete(`${URL}${id}/delete`)
+        .then(response => {
+            this.setState({
+                posts: response.data
+            })
+            window.location = '/blog';
+        })
+        .catch(error => {
+          console.log(error);
+        })
+      }
+
+
     render() { 
         
         return (
             <Container>
-                <Form>
-                    <FormGroup>
-                        <Label for="exampleEmail" sm={2}>Category</Label>
-                            <Col sm={12}>
-                                <Input type="text" name="category" placeholder="Post category" value={this.state.category} onChange={this.change} />
-                            </Col>
-                    </FormGroup>
-                    <FormGroup>
-                        <Label for="exampleEmail" sm={2}>Title</Label>
-                            <Col sm={12}>
-                                <Input type="text" name="title" placeholder="Post title" value={this.state.title} onChange={this.change} />
-                            </Col>
-                    </FormGroup>
-                    <FormGroup row>
-                        <Label for="exampleEmail" sm={2} >Content</Label>
-                            <Col sm={12}>
-                                <Input type="textarea" name="content"  placeholder="Post content" value={this.state.content} onChange={this.change} />
-                            </Col>
-                    </FormGroup>
-                    <Button type='submit' onClick={this.update}>Update</Button>
-                </Form>
+                <h5>Update blog {`'${this.state.title}'`}</h5>
+                    <div>
+                        <div>Category</div>
+                            <div>
+                                <input type = "text" name = "category" placeholder = "Post category" value = {this.state.category} onChange = {this.change} />
+                            </div>
+                    </div>
+                    <div >
+                        <div>Title</div>
+                            <div>
+                                <input type = "text" name="title" placeholder="Post title" value={this.state.title} onChange={this.change} />
+                            </div>
+                    </div>
+                    <div>
+                        <div>Content</div>
+                            <div>
+                                <input type="textarea" name="content"  placeholder="Post content" value={this.state.content}  onChange={this.change} />
+                            </div>
+                    </div>
+                    <div className = 'button' type='submit' onClick={this.update}>Update</div>
+                    <div className = "link" onClick={() => this.delete(this.state.id)} >Delete</div>
             </Container>
          );
     }

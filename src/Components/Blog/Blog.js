@@ -7,6 +7,7 @@ import decode from 'jwt-decode';
 import BlogPostList from './BlogPostList';
 import EditBlogPost from './EditBlogPost';
 import Admin from './Admin';
+import NewBlogPost from './NewBlogPost';
 
 const URL = 'http://ma:9000/posts';
 
@@ -17,7 +18,6 @@ class Blog extends Component {
             posts: [],
             search: '',
             searchPosts: [],
-            show: false,
             adminLoggedIn: false
         }
     }
@@ -49,9 +49,7 @@ class Blog extends Component {
     }
 
     newPost = () => {
-        this.setState(prevState => ({
-            show: !prevState.show
-        }));
+       this.props.history.push(`${this.props.match.url}/posts/new-post`);
     }
 
     adminLogin = () => {
@@ -92,27 +90,14 @@ class Blog extends Component {
         }
     }
 
-    delete = (id) => {
-        axios.delete(`${URL}${id}/delete`)
-        .then(response => {
-            this.setState({
-                posts: response.data
-            })
-            window.location = '/blog';
-        })
-        .catch(error => {
-          console.log(error);
-        })
-      }
 
-      back = () => {
-          this.props.history.push('/blog');
-      }
+    back = () => {
+        this.props.history.push('/blog');
+    }
     
 
     render() {
         const { posts, search } = this.state;
-        console.log(this.state.adminLogin)
         return (
             <Container>
                 { this.state.adminLoggedIn ? <button onClick = {this.newPost}>New Post</button> : null }
@@ -123,12 +108,16 @@ class Blog extends Component {
                 )} />
                 
                 <Route path = {`${this.props.match.path}/post/:id`} render = {(props) => (
-                    <BlogPostView {...props} posts = {posts} delete = {this.delete} back = {this.back}/>
+                    <BlogPostView {...props} posts = {posts} back = {this.back}/>
                 )} />
 
-                <Route path = {`${this.props.match.url}/edit-post/:id`} component = { EditBlogPost } />
+                <Route path = {`${this.props.match.path}/post/edit-post/:id`} render = {(props) => (
+                    <EditBlogPost {...props} />
+                )} />
 
-                <Route path = {`${this.props.match.url}/admin-login`} component = { Admin } />
+                <Route path = {`${this.props.match.path}/post/new-post`} component = { NewBlogPost } />
+
+                <Route path = {`${this.props.match.path}/admin-login`} component = { Admin } />
 
             </Container>
         )

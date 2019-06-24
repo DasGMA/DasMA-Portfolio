@@ -70,19 +70,19 @@ class NewBlogPost extends Component {
                     <div>
                         <div>Category</div>
                             <div>
-                                <input type="text" name="category" placeholder="Post category" value={category} onChange={(event) => this.change(event)} />
+                                <input type="text" name="category" placeholder="Post category" value={category} onChange={this.change} />
                             </div>
                     </div>
                     <div >
                         <div>Title</div>
                             <div>
-                                <input type="text" name="title" placeholder="Post title" value={title} onChange={(event) => this.change(event)} />
+                                <input type="text" name="title" placeholder="Post title" value={title} onChange={this.change} />
                             </div>
                     </div>
                     <div>
                         <div>Content</div>
                             <div>
-                                <input type="textarea" name="content"  placeholder="Post content" value={content}  onChange={(event) => this.change(event)} />
+                                <input type="textarea" name="content"  placeholder="Post content" value={content}  onChange={this.change} />
                             </div>
                     </div>
                     <div className = 'button' type='submit' onClick={this.addPost}>Save</div>
