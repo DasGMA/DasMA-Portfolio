@@ -8,7 +8,7 @@ function Project(props) {
             <Col  m={10} s={12} style = {{paddingTop: '1rem'}}>
                 <h5 style = {{color: '#fff'}}>{props.title}</h5>
                 <Card header = {<CardTitle image = {props.image}/>}>
-                    <p>{props.description}</p>
+                    <>{props.description}</>
                 </Card>
             </Col>
             <Col m = {1} s = {12}></Col>
