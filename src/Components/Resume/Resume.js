@@ -157,7 +157,7 @@ function Resume() {
                      <div className = 'col s12 m6 white-text column-dark aligned'>
                         <div className = 'jobs'>
                            <div className = 'techTools'>Front End</div>
-                           <div className = 'techToolsList'>CSS3, HTML5, JavaScript, React.js,<br/>Bootstrap, Materialize, LESS, Styled<br/>Canvas, OOP</div>
+                           <div className = 'techToolsList'>CSS3, HTML5, JavaScript, React.js,<br/>Bootstrap, Materialize, LESS, Styled Components,<br/>Canvas, OOP</div>
                         </div>
                         <div className = 'jobs'>
                            <div className = 'techTools'>Back End</div>
@@ -182,7 +182,7 @@ function Resume() {
                      <div className = 'col s12 column-dark' style = {{paddingTop: '1rem'}}>
                         <div className = 'jobs' style = {{paddingBottom: '0.5rem'}}>
                            <div className = 'techTools' style = {{fontSize: '5vw'}}>Front End</div>
-                           <div className = 'techToolsList' style = {{fontSize: '3vw'}} >CSS3, HTML5, JavaScript, React.js, Bootstrap, Materialize, LESS, Styled, Canvas, OOP</div>
+                           <div className = 'techToolsList' style = {{fontSize: '3vw'}} >CSS3, HTML5, JavaScript, React.js, Bootstrap, Materialize, LESS, Styled Components, Canvas, OOP</div>
                         </div>
                         <div className = 'jobs' style = {{paddingBottom: '0.5rem'}}>
                            <div className = 'techTools' style = {{fontSize: '5vw'}}>Back End</div>
