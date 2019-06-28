@@ -23,7 +23,7 @@ class Projects extends Component {
             // },
             {
                 'title': 'Space Game',
-                'link': 'https://guardians-of-the-galaxy-crazy-ugly-space-game.netlify.com/',
+                'link': 'https://guardians-of-the-galaxy-space-game.netlify.com',
                 'description': spaceShooterDescription,
                 'image': spaceShooter
             },
