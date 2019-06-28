@@ -35,6 +35,59 @@ function Resume() {
                      </div>
                   </Row>
                </div>
+               
+               {/* Skills slide */}
+               <div>
+                  {/* Desktop view */}
+                  <Row className = 'resume-row hide-on-small-and-down'>
+                     <div className = 'col s12 m6 valign-wrapper column-bright centered'>
+                        <h1>SKILLS</h1>
+                     </div>
+                     <div className = 'col s12 m6 white-text column-dark aligned'>
+                        <div className = 'jobs'>
+                           <div className = 'techTools'>Front End</div>
+                           <div className = 'techToolsList'>CSS3, HTML5, JavaScript, React.js,<br/>Bootstrap, Materialize, LESS, Styled Components,<br/>Canvas, OOP</div>
+                        </div>
+                        <div className = 'jobs'>
+                           <div className = 'techTools'>Back End</div>
+                           <div className = 'techToolsList'>Node.js, Express.js, Knex, SQLite, Django, Python, REST API's</div>
+                        </div>
+                        <div className = 'jobs'>
+                           <div className = 'techTools'>Tools</div>
+                           <div className = 'techToolsList'>Git, VS Code, Postman, MS Project<br/>Jira, Linux, Heroku, Netlify<br/>Docker, Google Cloud Platform</div>
+                        </div>
+                        <div className = 'jobs'>
+                           <div className = 'techTools'>Project Management</div>
+                           <div className = 'techToolsList'>Agile & Scrum Methodologies, PRINCE2,<br/>Requirements gathering, SDLC </div>
+                        </div>
+                     </div>
+                  </Row>
+
+                  {/* Mobile and tablet view */}
+                  <Row className = 'hide-on-med-and-up'>
+                     <div className = 'col s12' style = {{background: 'white', padding: '0'}}>
+                        <h1 style = {{fontSize: '2rem', margin: '0', padding: '0.5rem 3rem'}}>SKILLS</h1>
+                     </div>
+                     <div className = 'col s12 column-dark' style = {{paddingTop: '1rem'}}>
+                        <div className = 'jobs' style = {{paddingBottom: '0.5rem'}}>
+                           <div className = 'techTools' style = {{fontSize: '5vw'}}>Front End</div>
+                           <div className = 'techToolsList' style = {{fontSize: '3vw'}} >CSS3, HTML5, JavaScript, React.js, Bootstrap, Materialize, LESS, Styled Components, Canvas, OOP</div>
+                        </div>
+                        <div className = 'jobs' style = {{paddingBottom: '0.5rem'}}>
+                           <div className = 'techTools' style = {{fontSize: '5vw'}}>Back End</div>
+                           <div className = 'techToolsList' style = {{fontSize: '3vw'}}>Node.js, Express.js, Knex, SQLite, Django, Python, REST API's</div>
+                        </div>
+                        <div className = 'jobs' style = {{paddingBottom: '0.5rem'}}>
+                           <div className = 'techTools' style = {{fontSize: '5vw'}}>Tools</div>
+                           <div className = 'techToolsList' style = {{fontSize: '3vw'}}>Git, VS Code, Postman, MS Project, Jira, Linux, Heroku, Netlify, Docker, Google Cloud Platform </div>
+                        </div>
+                        <div className = 'jobs' style = {{paddingBottom: '0.5rem'}}>
+                           <div className = 'techTools' style = {{fontSize: '5vw'}}>Project Management</div>
+                           <div className = 'techToolsList' style = {{fontSize: '3vw'}}>Agile & Scrum Methodologies, PRINCE2, Requirements gathering, SDLC </div>
+                        </div>
+                     </div>
+                  </Row>
+               </div>
 
                {/* Experience slide */}
                <div>
@@ -142,59 +195,6 @@ function Resume() {
                            <div className = 'date'>2001 - 2005</div>
                            <div className = 'position'>BS | Sport Coaching </div>
                            <div className = 'school'>LSU</div>
-                        </div>
-                     </div>
-                  </Row>
-               </div>
-
-              {/* Skills slide */}
-               <div>
-                  {/* Desktop view */}
-                  <Row className = 'resume-row hide-on-small-and-down'>
-                     <div className = 'col s12 m6 valign-wrapper column-bright centered'>
-                        <h1>SKILLS</h1>
-                     </div>
-                     <div className = 'col s12 m6 white-text column-dark aligned'>
-                        <div className = 'jobs'>
-                           <div className = 'techTools'>Front End</div>
-                           <div className = 'techToolsList'>CSS3, HTML5, JavaScript, React.js,<br/>Bootstrap, Materialize, LESS, Styled Components,<br/>Canvas, OOP</div>
-                        </div>
-                        <div className = 'jobs'>
-                           <div className = 'techTools'>Back End</div>
-                           <div className = 'techToolsList'>Node.js, Express.js, Knex, SQLite, Django, Python, REST API's</div>
-                        </div>
-                        <div className = 'jobs'>
-                           <div className = 'techTools'>Tools</div>
-                           <div className = 'techToolsList'>Git, VS Code, Postman, MS Project<br/>Jira, Linux, Heroku, Netlify<br/>Docker, Google Cloud Platform</div>
-                        </div>
-                        <div className = 'jobs'>
-                           <div className = 'techTools'>Project Management</div>
-                           <div className = 'techToolsList'>Agile & Scrum Methodologies, PRINCE2,<br/>Requirements gathering, SDLC </div>
-                        </div>
-                     </div>
-                  </Row>
-
-                  {/* Mobile and tablet view */}
-                  <Row className = 'hide-on-med-and-up'>
-                     <div className = 'col s12' style = {{background: 'white', padding: '0'}}>
-                        <h1 style = {{fontSize: '2rem', margin: '0', padding: '0.5rem 3rem'}}>SKILLS</h1>
-                     </div>
-                     <div className = 'col s12 column-dark' style = {{paddingTop: '1rem'}}>
-                        <div className = 'jobs' style = {{paddingBottom: '0.5rem'}}>
-                           <div className = 'techTools' style = {{fontSize: '5vw'}}>Front End</div>
-                           <div className = 'techToolsList' style = {{fontSize: '3vw'}} >CSS3, HTML5, JavaScript, React.js, Bootstrap, Materialize, LESS, Styled Components, Canvas, OOP</div>
-                        </div>
-                        <div className = 'jobs' style = {{paddingBottom: '0.5rem'}}>
-                           <div className = 'techTools' style = {{fontSize: '5vw'}}>Back End</div>
-                           <div className = 'techToolsList' style = {{fontSize: '3vw'}}>Node.js, Express.js, Knex, SQLite, Django, Python, REST API's</div>
-                        </div>
-                        <div className = 'jobs' style = {{paddingBottom: '0.5rem'}}>
-                           <div className = 'techTools' style = {{fontSize: '5vw'}}>Tools</div>
-                           <div className = 'techToolsList' style = {{fontSize: '3vw'}}>Git, VS Code, Postman, MS Project, Jira, Linux, Heroku, Netlify, Docker, Google Cloud Platform </div>
-                        </div>
-                        <div className = 'jobs' style = {{paddingBottom: '0.5rem'}}>
-                           <div className = 'techTools' style = {{fontSize: '5vw'}}>Project Management</div>
-                           <div className = 'techToolsList' style = {{fontSize: '3vw'}}>Agile & Scrum Methodologies, PRINCE2, Requirements gathering, SDLC </div>
                         </div>
                      </div>
                   </Row>
