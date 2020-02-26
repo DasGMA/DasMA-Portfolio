@@ -1,9 +1,7 @@
 import React from 'react';
 
-function Phone() {
+export default function Email() {
     return(
         <div className = 'contact black' style={{color: 'white'}}><a href = 'mailto:das@dasma.dev'>das@dasma.dev</a></div>
     )
 }
-
-export default Phone;

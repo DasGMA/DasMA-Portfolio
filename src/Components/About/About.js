@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Col } from 'react-materialize';
 
-function About() {
+export default function About() {
     return (
             <Row className = 'blue-grey-text text-lighten-5'>
                 <Col m = {1}></Col>
@@ -15,5 +15,3 @@ function About() {
             </Row>
     )
 }
-
-export default About;

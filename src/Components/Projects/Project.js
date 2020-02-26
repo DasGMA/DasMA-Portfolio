@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, CardTitle, Row, Col } from 'react-materialize';
 
-function Project(props) {
+export default function Project(props) {
     return(
         <Row>
             <Col m = {1} s = {12}></Col>
@@ -13,8 +13,5 @@ function Project(props) {
             </Col>
             <Col m = {1} s = {12}></Col>
         </Row>
-
     )
 }
-
-export default Project;

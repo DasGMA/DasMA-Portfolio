@@ -2,8 +2,7 @@ import React from 'react';
 import { Container } from 'react-materialize';
 import { NavLink } from 'react-router-dom';
 
-function Navigation() {
-    
+export default function Navigation() {
     return (
         <header>
             <Container style = {{borderBottom: '1px solid grey'}}>
@@ -21,5 +20,3 @@ function Navigation() {
         </header>
     )
 }
-
-export default Navigation;
