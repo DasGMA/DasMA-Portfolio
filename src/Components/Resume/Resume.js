@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Carousel } from 'react-materialize';
-import pdf from '../../Documents/DasMa.pdf';
+import pdf from '../../Documents/DasMA.pdf';
 
 export default function Resume() {
    const options = {fullWidth: true, indicators: true};
@@ -47,19 +47,19 @@ export default function Resume() {
                   <div className = 'col s12 m6 white-text column-dark aligned'>
                      <div className = 'jobs'>
                         <div className = 'techTools'>Front End</div>
-                        <div className = 'techToolsList'>CSS3, HTML5, JavaScript, React.js,<br/>Bootstrap, Materialize, LESS, Styled Components,<br/>Canvas, OOP</div>
+                        <div className = 'techToolsList'>React.js. React Hooks, React Native, Redux, JavaScript, ES6, HTML5, CSS3, Flexbox, React Router, LESS, SASS, Styled, Bootstrap, Materialize, Canvas</div>
                      </div>
                      <div className = 'jobs'>
                         <div className = 'techTools'>Back End</div>
-                        <div className = 'techToolsList'>Node.js, Express.js, Knex, SQLite, Django, Python, REST API's</div>
+                        <div className = 'techToolsList'>Node.js, Express.js, Knex, SQLite, Django, Python, REST API's, MongoDB</div>
                      </div>
                      <div className = 'jobs'>
                         <div className = 'techTools'>Tools</div>
-                        <div className = 'techToolsList'>Git, VS Code, Postman, MS Project<br/>Jira, Linux, Heroku, Netlify<br/>Docker, Google Cloud Platform</div>
+                        <div className = 'techToolsList'>Git, VS Code, Xcode, Androi Studio, EXPO, C, JAVA, Postman, MS Project, Jira, Linux, Heroku, Netlify, >Docker, Google Cloud Platform</div>
                      </div>
                      <div className = 'jobs'>
                         <div className = 'techTools'>Project Management</div>
-                        <div className = 'techToolsList'>Agile & Scrum Methodologies, PRINCE2,<br/>Requirements gathering, SDLC </div>
+                        <div className = 'techToolsList'>Agile & Scrum Methodologies, PRINCE2, Requirements Gathering, SDLC </div>
                      </div>
                   </div>
                </Row>
@@ -72,15 +72,15 @@ export default function Resume() {
                   <div className = 'col s12 column-dark' style = {{paddingTop: '1rem'}}>
                      <div className = 'jobs' style = {{paddingBottom: '0.5rem'}}>
                         <div className = 'techTools' style = {{fontSize: '5vw'}}>Front End</div>
-                        <div className = 'techToolsList' style = {{fontSize: '3vw'}} >CSS3, HTML5, JavaScript, React.js, Bootstrap, Materialize, LESS, Styled Components, Canvas, OOP</div>
+                        <div className = 'techToolsList' style = {{fontSize: '3vw'}} >React.js. React Hooks, React Native, Redux, JavaScript, ES6, HTML5, CSS3, Flexbox, React Router, LESS, SASS, Styled, Bootstrap, Materialize, Canvas</div>
                      </div>
                      <div className = 'jobs' style = {{paddingBottom: '0.5rem'}}>
                         <div className = 'techTools' style = {{fontSize: '5vw'}}>Back End</div>
-                        <div className = 'techToolsList' style = {{fontSize: '3vw'}}>Node.js, Express.js, Knex, SQLite, Django, Python, REST API's</div>
+                        <div className = 'techToolsList' style = {{fontSize: '3vw'}}>Node.js, Express.js, Knex, SQLite, Django, Python, REST API's, MongoDB</div>
                      </div>
                      <div className = 'jobs' style = {{paddingBottom: '0.5rem'}}>
                         <div className = 'techTools' style = {{fontSize: '5vw'}}>Tools</div>
-                        <div className = 'techToolsList' style = {{fontSize: '3vw'}}>Git, VS Code, Postman, MS Project, Jira, Linux, Heroku, Netlify, Docker, Google Cloud Platform </div>
+                        <div className = 'techToolsList' style = {{fontSize: '3vw'}}>Git, VS Code, Xcode, Androi Studio, EXPO, C, JAVA, Postman, MS Project, Jira, Linux, Heroku, Netlify, >Docker, Google Cloud Platform</div>
                      </div>
                      <div className = 'jobs' style = {{paddingBottom: '0.5rem'}}>
                         <div className = 'techTools' style = {{fontSize: '5vw'}}>Project Management</div>
@@ -100,6 +100,12 @@ export default function Resume() {
                   </div>
                   <div className = 'col s12 m6 column-bright aligned'>
                      <div className = 'jobs'>
+                        <div className = 'date'>2019 - 2020</div>
+                        <div className = 'position'>React Native Developer</div>
+                        <div className = 'company'>REALM</div>
+                        <div className = 'responsibility'>Gamers Social App React Native Front End Developer</div>
+                     </div>
+                     <div className = 'jobs'>
                         <div className = 'date'>2016 - 2017</div>
                         <div className = 'position'>Project Coordinator</div>
                         <div className = 'company'>IT - iTech LLC</div>
@@ -117,12 +123,12 @@ export default function Resume() {
                         <div className = 'company'>Connect World LTD</div>
                         <div className = 'responsibility'>Business Owner</div>
                      </div>
-                     <div className = 'jobs'>
+                     {/* <div className = 'jobs'>
                         <div className = 'date'>2005 - 2014</div>
                         <div className = 'position'>Project Coordinator | Assistant Manager</div>
                         <div className = 'company'>Blue Boar Group</div>
                         <div className = 'responsibility'>Hotel Expansion Project Coordinator</div>
-                     </div>
+                     </div> */}
                   </div>
                </Row>
 
@@ -151,12 +157,12 @@ export default function Resume() {
                         <div className = 'company' style = {{fontSize: '1rem', marginTop: '0'}}>Connect World LTD</div>
                         
                      </div>
-                     <div className = 'jobs' style = {{paddingBottom: '1.3rem'}}>
+                     {/* <div className = 'jobs' style = {{paddingBottom: '1.3rem'}}>
                         <div className = 'date' style = {{fontSize: '1rem'}}>2005 - 2014</div>
                         <div className = 'position' style = {{fontSize: '1rem'}}>Project Coordinator | Assistant Manager</div>
                         <div className = 'company' style = {{fontSize: '1rem', marginTop: '0'}}>Blue Boar Group</div>
                         
-                     </div>
+                     </div> */}
                   </div>
                </Row>
             </div>
