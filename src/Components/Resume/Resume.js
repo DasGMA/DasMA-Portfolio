@@ -55,7 +55,7 @@ export default function Resume() {
                      </div>
                      <div className = 'jobs'>
                         <div className = 'techTools'>Tools</div>
-                        <div className = 'techToolsList'>Git, VS Code, Xcode, Androi Studio, EXPO, C, JAVA, Postman, MS Project, Jira, Linux, Heroku, Netlify, >Docker, Google Cloud Platform</div>
+                        <div className = 'techToolsList'>Git, VS Code, Xcode, Androi Studio, EXPO, C, JAVA, Postman, MS Project, Jira, Linux, Heroku, Netlify, Docker, Google Cloud Platform</div>
                      </div>
                      <div className = 'jobs'>
                         <div className = 'techTools'>Project Management</div>
@@ -80,7 +80,7 @@ export default function Resume() {
                      </div>
                      <div className = 'jobs' style = {{paddingBottom: '0.5rem'}}>
                         <div className = 'techTools' style = {{fontSize: '5vw'}}>Tools</div>
-                        <div className = 'techToolsList' style = {{fontSize: '3vw'}}>Git, VS Code, Xcode, Androi Studio, EXPO, C, JAVA, Postman, MS Project, Jira, Linux, Heroku, Netlify, >Docker, Google Cloud Platform</div>
+                        <div className = 'techToolsList' style = {{fontSize: '3vw'}}>Git, VS Code, Xcode, Androi Studio, EXPO, C, JAVA, Postman, MS Project, Jira, Linux, Heroku, Netlify, Docker, Google Cloud Platform</div>
                      </div>
                      <div className = 'jobs' style = {{paddingBottom: '0.5rem'}}>
                         <div className = 'techTools' style = {{fontSize: '5vw'}}>Project Management</div>
