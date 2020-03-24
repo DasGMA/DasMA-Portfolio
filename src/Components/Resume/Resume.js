@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Carousel } from 'react-materialize';
-import pdf from '../../Documents/dasma.pdf';
+import pdf from '../../CV/dasma.pdf';
 
 export default function Resume() {
    const options = {fullWidth: true, indicators: true};
